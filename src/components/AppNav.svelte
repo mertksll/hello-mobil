@@ -1,17 +1,38 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+  import Icon from "./Icon.svelte";
+  import { validCart, totals } from "$lib/coffee";
   let { currentPath = "/", lang = "tr" } = $props<{ currentPath?: string; lang?: string }>();
+  let count = $state(0);
   const names: Record<string, string[]> = {
-    tr: ["Keşfet", "Sepet", "Siparişler", "Profil"],
-    en: ["Explore", "Cart", "Orders", "Profile"],
-    ar: ["استكشف", "السلة", "الطلبات", "الملف"],
-    fa: ["کشف", "سبد", "سفارش‌ها", "پروفایل"],
+    tr: ["Keşfet", "Sepetim", "Siparişlerim", "Profilim"],
+    en: ["Explore", "My cart", "My orders", "Profile"],
+    ar: ["استكشف", "سلتي", "طلباتي", "الملف"],
+    fa: ["کشف", "سبد من", "سفارش‌ها", "پروفایل"],
   };
   const routes = ["/", "/sepet/", "/siparisler/", "/profil/"];
-  const icons = ["☕", "▧", "☷", "○"];
+  const icons = ["coffee", "bag", "orders", "user"];
+  onMount(() => {
+    const read = () => {
+      try {
+        const data = JSON.parse(localStorage.getItem("kampus-cart") ?? "[]");
+        count = validCart(data) ? totals(data).quantity : 0;
+      } catch {
+        count = 0;
+      }
+    };
+    read();
+    window.addEventListener("kampus:change", read);
+    window.addEventListener("storage", read);
+    return () => {
+      window.removeEventListener("kampus:change", read);
+      window.removeEventListener("storage", read);
+    };
+  });
 </script>
 
 <nav
-  class="alt-menu"
+  class="app-nav"
   aria-label={lang === "tr"
     ? "Ana menü"
     : lang === "ar"
@@ -22,44 +43,13 @@
 >
   {#each routes as route, i}<a
       href={route}
-      aria-current={currentPath === route ? "page" : undefined}
-      ><span aria-hidden="true">{icons[i]}</span>{(names[lang] ?? names.tr)[i]}</a
+      aria-current={currentPath === route || (i === 0 && currentPath.startsWith("/urun/"))
+        ? "page"
+        : undefined}
+      ><span class="nav-icon"
+        ><Icon name={icons[i]} size={21} />{#if i === 1 && count > 0}<span class="cart-count"
+            >{count > 99 ? "99+" : count}</span
+          >{/if}</span
+      ><span>{(names[lang] ?? names.tr)[i]}</span></a
     >{/each}
 </nav>
-
-<style>
-  .alt-menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    padding-bottom: env(safe-area-inset-bottom);
-    background: var(--kart);
-    border-top: 1px solid var(--kenar);
-    z-index: 20;
-  }
-  .alt-menu a {
-    flex: 1;
-    max-width: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    padding: 10px 5px;
-    font-size: 12px;
-    color: var(--yazi-soluk);
-    min-height: 64px;
-  }
-  .alt-menu a[aria-current="page"] {
-    color: var(--renk-ana);
-    font-weight: 800;
-    border-top: 3px solid var(--renk-ana);
-    padding-top: 7px;
-  }
-  .alt-menu span {
-    font-size: 21px;
-    line-height: 1.2;
-  }
-</style>

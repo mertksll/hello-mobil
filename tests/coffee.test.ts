@@ -52,3 +52,21 @@ describe("Sipariş iş kuralları", () => {
     expect(validOrders([{ ...o, code: "bad" }])).toBe(false);
   });
 });
+
+import { mergeCart, validProfile, emptyProfile, products, cafes } from "../src/lib/coffee";
+test("Yeni ekleme mevcut sepeti değiştirmeden birleştirir; adet taşması geri alınır", () => {
+  const cart = [{ ...latte, quantity: 98 }];
+  expect(mergeCart(cart, [{ ...latte, quantity: 1 }])[0].quantity).toBe(99);
+  expect(cart[0].quantity).toBe(98);
+  expect(() => mergeCart(cart, [{ ...latte, quantity: 2 }])).toThrow();
+  expect(cart[0].quantity).toBe(98);
+});
+test("Profil yalnızca tanımlı kafe ve sınırlı metin alanları kabul eder", () => {
+  expect(validProfile({ ...emptyProfile, name: "Demo Mert", room: "A-203" })).toBe(true);
+  expect(validProfile({ ...emptyProfile, name: "a".repeat(51) })).toBe(false);
+  expect(validProfile({ ...emptyProfile, cafe: "unknown" })).toBe(false);
+});
+test("Katalogda 24 benzersiz ürün ve her kafede 8 seçenek var", () => {
+  expect(new Set(products.map((p) => p.id)).size).toBe(24);
+  for (const cafe of cafes) expect(products.filter((p) => p.cafe === cafe).length).toBe(8);
+});

@@ -1,9 +1,12 @@
-Non-browser component integration tests (JSDOM; not visual/device testing)
-PASS form reset + localized status + no request/storage: tr
-PASS form reset + localized status + no request/storage: en
-PASS form reset + localized status + no request/storage: ar
-PASS form reset + localized status + no request/storage: fa
-PASS persisted cart + different cafe rejected
-PASS checkout + 10% discount + code + persisted history
-PASS order status progression
-PASS device records deletion
+Non-browser component tests (JSDOM; no real browser/device visual test)
+PASS localized contact form resets without sending/storing: tr
+PASS localized contact form resets without sending/storing: en
+PASS localized contact form resets without sending/storing: ar
+PASS localized contact form resets without sending/storing: fa
+PASS 24 products, 8 per cafe, price sorting, favorites, quick-add, live nav badge
+PASS cross-cafe cart protection
+PASS profile persistence and favorites list
+PASS saved classroom autofill, quantity editing, discount, successful checkout
+PASS order timeline progression and reorder
+PASS confirmed history deletion preserves cart, favorites and profile
+PASS empty search result and filter reset

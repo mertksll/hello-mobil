@@ -1,6 +1,5 @@
 ---
 import AppHeader from "../components/AppHeader.svelte";
-import AppNav from "../components/AppNav.svelte";
 import "../styles/app.css";
 interface Props {
   title?: string;
@@ -16,14 +15,14 @@ const labels: Record<string, string[]> = {
     "İletişim",
     "Kullanım koşulları",
     "Gizlilik",
-    "Eğitim demosu · Kampüsün kahvesi, sınıfının kapısında.",
+    "Ders projesi · Menü, fiyatlar ve fotoğraflar temsilidir. Markalarla resmi bağlantı bulunmaz.",
   ],
   en: [
     "About",
     "Contact",
     "Terms of use",
     "Privacy",
-    "Educational demo · Campus coffee at your classroom door.",
+    "Educational demo · Menu, prices and photos are illustrative. No brand affiliation.",
   ],
   ar: [
     "حول التطبيق",
@@ -69,11 +68,14 @@ const prefix = lang === "tr" ? "" : "/" + lang;
     </script>
   </head>
   <body>
-    <AppHeader client:load lang={lang} />
+    <AppHeader client:load lang={lang} currentPath={Astro.url.pathname} />
     <main id="main">
       <slot />
     </main>
     <footer class="site-footer">
+      <a href="/" class="footer-brand">
+        Kampus's Coffee<span>Her molaya bir kahve.</span>
+      </a>
       <nav class="info-nav" aria-label={words[0]}>
         {pages.map((page, i) => (
           <a href={`${prefix}/${page}/`}>{words[i]}</a>
@@ -98,6 +100,5 @@ const prefix = lang === "tr" ? "" : "/" + lang;
       </nav>
       <p class="muted">{words[4]}</p>
     </footer>
-    <AppNav client:load lang={lang} currentPath={Astro.url.pathname} />
   </body>
 </html>

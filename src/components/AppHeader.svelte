@@ -1,87 +1,69 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { tema } from "$lib/tema.svelte";
-  let { lang = "tr" } = $props<{ lang?: string }>();
+  import { validProfile } from "$lib/coffee";
+  import Icon from "./Icon.svelte";
+  import AppNav from "./AppNav.svelte";
+  let { lang = "tr", currentPath = "/" } = $props<{ lang?: string; currentPath?: string }>();
+  let destination = $state("Sınıfını seç");
+  let initials = $state("");
   const labels: Record<string, string> = {
     tr: "Açık / koyu temayı değiştir",
     en: "Toggle light / dark theme",
-    ar: "تبديل المظهر الفاتح والداكن",
-    fa: "تغییر پوسته روشن و تیره",
+    ar: "تبديل المظهر",
+    fa: "تغییر پوسته",
   };
-  onMount(() => tema.oku());
+  onMount(() => {
+    tema.oku();
+    const read = () => {
+      try {
+        const p = JSON.parse(localStorage.getItem("kampus-profile") ?? "null");
+        if (validProfile(p)) {
+          initials = p.name
+            .trim()
+            .split(/\s+/)
+            .map((v) => v[0] ?? "")
+            .slice(0, 2)
+            .join("")
+            .toLocaleUpperCase("tr");
+          destination = p.building && p.room ? p.building + " · " + p.room : "Sınıfını seç";
+        }
+      } catch {}
+    };
+    read();
+    window.addEventListener("kampus:change", read);
+    return () => window.removeEventListener("kampus:change", read);
+  });
 </script>
 
-<header class="ust">
+<header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"
-      ><span class="logo-mark"><img src="/logo.svg" alt="" width="38" height="38" /></span><span
-        >Kampus's Coffee<small
+    <a href="/" class="wordmark"
+      ><span class="mark"><img src="/brand-mark.png" alt="" width="36" height="36" /></span><span
+        >Kampus's <b>Coffee</b><small
           >{lang === "tr"
-            ? "Kampüsün kahvesi."
+            ? "HER MOLAYA BİR KAHVE"
             : lang === "en"
-              ? "Your campus coffee."
+              ? "A COFFEE FOR EVERY BREAK"
               : lang === "ar"
-                ? "قهوتك في الجامعة."
-                : "قهوه تو در دانشگاه."}</small
+                ? "قهوة لكل استراحة"
+                : "قهوه برای هر استراحت"}</small
         ></span
       ></a
-    ><button
-      class="theme"
-      onclick={() => tema.degistir()}
-      aria-label={labels[lang] ?? labels.tr}
-      title={labels[lang] ?? labels.tr}>{tema.mod === "gece" ? "☀" : "☾"}</button
-    >
+    ><AppNav {lang} {currentPath} />
+    <div class="header-actions">
+      {#if lang === "tr"}<a class="delivery-link" href="/profil/#teslimat"
+          ><Icon name="pin" /><span
+            ><small>Teslimat noktası</small><strong>{destination}</strong></span
+          ><Icon name="chevron" size={14} /></a
+        >{/if}<button
+        class="icon-button theme-button"
+        onclick={() => tema.degistir()}
+        aria-label={labels[lang] ?? labels.tr}
+        ><Icon name={tema.mod === "gece" ? "sun" : "moon"} /></button
+      ><a class="header-avatar" href="/profil/" aria-label={lang === "tr" ? "Profilim" : "Profile"}
+        >{#if initials}{initials}{:else}<Icon name="user" size={18} />{/if}</a
+      >
+    </div>
   </div>
 </header>
-
-<style>
-  .ust {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--kart);
-    border-bottom: 1px solid var(--kenar);
-    padding-top: env(safe-area-inset-top);
-  }
-  .header-inner {
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 24px;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: -0.4px;
-  }
-  .logo small {
-    display: block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: var(--yazi-soluk);
-    margin-top: 3px;
-  }
-  .logo-mark {
-    background: var(--logo-zemin);
-    border-radius: 12px;
-    width: 45px;
-    height: 45px;
-    display: grid;
-    place-items: center;
-  }
-  .theme {
-    border: 1px solid var(--kenar);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    background: var(--kart);
-    color: var(--yazi);
-    font-size: 25px;
-  }
-</style>
