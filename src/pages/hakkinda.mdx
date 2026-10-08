@@ -1,35 +1,20 @@
 ---
 layout: ../layouts/Layout.astro
-title: Proje Rehberi — PassoKlon
+title: "Hakkında | Kampus's Coffee"
+lang: tr
 ---
 
 import CanliRozet from '../components/react/CanliRozet';
 
-<div class="sayfa">
-  <div class="kart" style="padding: 20px;">
-    <h1>🚀 Proje Mimarisi: Astro + Tauri v2</h1>
-    <p>
-      Bu proje, mobil ve masaüstü uygulama geliştirmede <strong>Astro</strong> altyapısına dönüştürülmüştür.
-    </p>
-
-    <div style="margin: 16px 0;">
-      <CanliRozet client:load etiket="MDX içinde React Bileşeni" />
-    </div>
-
-    <h2>✨ Neden Astro?</h2>
-    <ul>
-      <li><strong>Svelte 5 Runes:</strong> Reaktif mobil arayüzler ve state yönetimi (<code>$state</code>, <code>$derived</code>).</li>
-      <li><strong>React Desteği:</strong> Zengin React bileşen ekosistemini doğrudan kullanabilme.</li>
-      <li><strong>MDX Desteği:</strong> Markdown ile zengin içerik ve bileşenleri bir arada yazabilme.</li>
-      <li><strong>Hafif & Hızlı:</strong> Statik derleme ve Tauri v2 WebView ile ultra hafif paket boyutu.</li>
-    </ul>
-
-    <h2>📱 Sayfalar</h2>
-    <ul>
-      <li><strong>Keşfet (<code>/</code>):</strong> Etkinlik arama ve kategori filtreleri</li>
-      <li><strong>Biletlerim (<code>/biletlerim</code>):</strong> Satın alınan biletler ve Rust bilet kodları</li>
-      <li><strong>Sepet (<code>/sepet</code>):</strong> Sepet yönetimi ve ödeme tamamlama</li>
-      <li><strong>Profil (<code>/profil</code>):</strong> Kullanıcı bilgisi ve gece/gündüz modu</li>
-    </ul>
-  </div>
-</div>
+<article className="info-page">
+<h1>Hakkında</h1>
+<h2>Kahve molasını sınıfına getiriyoruz</h2>
+<p>Kampus's Coffee, ders aralarında kafede sıra bekleme sorunundan doğdu. Öğrenciler bir kafeden kahve seçer, seçeneklerini belirler ve aynı sınıfa toplu sipariş verir. Bu eğitim demosunda gerçek ödeme veya teslimat yapılmaz.</p>
+<h2>Geliştirici</h2>
+<p>Mustafa Mert Köksal · 2620511152 · Bilişim Güvenliği Teknolojisi · İstinye Üniversitesi Meslek Yüksekokulu. MYO063 Mobil Programlama; öğretim görevlisi Keyvan Arasteh Abbasabad.</p>
+<h2>Teknolojiler</h2>
+<p>Tauri v2 ve Rust: yerel uygulama katmanı; Astro: statik sayfalar; Svelte 5: etkileşimli arayüz; React: aşağıdaki sayaç; MDX: bilgi sayfaları; Bun: paketler ve derleme.</p>
+<h2>Demo kapsamı</h2>
+<p>Starbucks, Kahve Dünyası ve Espressolab adları örnek kafe seçenekleridir. İş ortaklığı yoktur; fiyatlar ve indirimler temsili verilerdir. Gerçek marka entegrasyonu, hesap ve kurye yönetimi sonraki aşamalardır.</p>
+<CanliRozet client:load etiket="Kahve molası sayacı" />
+</article>

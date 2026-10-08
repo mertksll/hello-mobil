@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import IletisimFormu from "../components/IletisimFormu.svelte";
+---
+
+<Layout title="İletişim | Kampus's Coffee" lang="tr">
+  <article class="info-page">
+    <h1>İletişim</h1>
+    <h2>Fikrini paylaş</h2>
+    <p>
+      Bu form bir arayüz demosudur. Gönder düğmesi yalnızca yerel başarı bildirimi gösterir; mesaj
+      iletilmez ve saklanmaz. Gerçek kişisel bilgi yerine örnek veri kullan.
+    </p>
+    <a href="https://github.com/mertksll">GitHub profili</a>
+    <IletisimFormu client:load lang="tr" />
+  </article>
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import IletisimFormu from "../../components/IletisimFormu.svelte";
+---
+
+<Layout title="Contact | Kampus's Coffee" lang="en">
+  <article class="info-page">
+    <h1>Contact</h1>
+    <h2>Share your thoughts</h2>
+    <p>
+      This form is an interface demo. Submit only shows a local success notice; your message is
+      neither sent nor saved. Use sample information instead of real personal details.
+    </p>
+    <a href="https://github.com/mertksll">GitHub profile</a>
+    <IletisimFormu client:load lang="en" />
+  </article>
+</Layout>
