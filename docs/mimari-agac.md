@@ -9,7 +9,7 @@ Kampus's Coffee
 ├── /sepet/                   Tek kafe, adet düzenleme, örnek sınıf, indirim ve demo onayı
 ├── /siparisler/              Aktif/tamamlanan filtre, durum adımları, detay ve tekrar sipariş
 ├── /profil/                  İsim/kafe/sınıf tercihleri, favoriler, istatistik, geçmiş silme
-├── /hakkinda/                TR MDX, proje ve React sayaç
+├── /hakkinda/                TR MDX, kurumsal tanıtım ve React proje bilgileri
 ├── /iletisim/                TR Astro + Svelte form
 ├── /kosullar/                TR MDX
 ├── /gizlilik/                TR MDX

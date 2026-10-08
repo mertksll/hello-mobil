@@ -1864,15 +1864,6 @@ main {
   gap: 18px;
   margin-top: 26px;
 }
-.about-counter {
-  border: 0;
-  border-radius: 10px;
-  padding: 13px 20px;
-  background: var(--renk-ana);
-  color: var(--ana-uzeri);
-  font-size: 13px;
-  min-height: 44px;
-}
 @media (min-width: 1600px) {
   .app-page {
     max-width: 1440px;
@@ -2641,4 +2632,253 @@ main {
 
 .mark {
   background: var(--ikon-krem);
+}
+
+/* About: editorial introduction and expandable project information. */
+.info-page.about-page {
+  max-width: 1080px;
+  margin: 40px auto 64px;
+  padding: 0;
+  overflow: hidden;
+}
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  background: var(--hero-zemin);
+}
+.about-intro-copy {
+  padding: clamp(28px, 4vw, 52px);
+  align-self: center;
+}
+.about-page .about-eyebrow {
+  margin: 0 0 22px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+.about-page h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  text-wrap: balance;
+}
+.about-page .about-lead {
+  margin: 24px 0 0;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.about-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center 60%;
+}
+.about-story,
+.about-values {
+  padding: 38px 44px;
+}
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: 44px;
+  border-bottom: 1px solid var(--kenar);
+}
+.about-page h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+.about-story p {
+  margin: 0;
+}
+.about-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+.about-value-number {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--vurgu);
+  color: var(--renk-ana);
+  font-size: 12px;
+  font-weight: 700;
+}
+.about-value h3 {
+  margin: 17px 0 10px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.about-value p {
+  margin: 0;
+  font-size: 13px;
+}
+.about-invitation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 44px 38px;
+  padding: 26px;
+  border-radius: 14px;
+  background: var(--vurgu);
+}
+.about-invitation h2 {
+  font-size: 20px;
+}
+.about-invitation a.btn {
+  flex-shrink: 0;
+  color: var(--ana-uzeri);
+  text-decoration: none;
+}
+.project-details {
+  border-top: 1px solid var(--kenar);
+}
+.project-details summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 44px;
+  min-height: 72px;
+  cursor: pointer;
+}
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+.project-details summary:hover {
+  background: var(--vurgu);
+}
+.project-details summary:focus-visible {
+  outline: 2px solid var(--renk-ana);
+  outline-offset: -4px;
+}
+.project-details summary strong,
+.project-details summary small {
+  display: block;
+}
+.project-details summary strong {
+  font-size: 15px;
+}
+.project-details summary small {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--yazi-soluk);
+}
+.project-details-toggle {
+  font-size: 26px;
+  font-weight: 300;
+}
+.project-details[open] .project-details-toggle {
+  transform: rotate(45deg);
+}
+.project-details-content {
+  padding: 0 44px 32px;
+}
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 28px;
+  margin: 0 0 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--kenar);
+}
+.project-facts dt {
+  margin-bottom: 5px;
+  color: var(--yazi-soluk);
+  font-size: 12px;
+}
+.project-facts dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.project-details h3 {
+  font-size: 15px;
+}
+.about-page .technology-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin-bottom: 0;
+}
+.technology-list li {
+  padding: 5px 12px;
+  border-radius: 7px;
+  background: var(--vurgu);
+  color: var(--yazi);
+  font-size: 12px;
+}
+[dir="rtl"] .about-page h1,
+[dir="rtl"] .about-page .about-eyebrow {
+  letter-spacing: normal;
+}
+@media (max-width: 1150px) {
+  .info-page.about-page {
+    margin-inline: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .info-page.about-page {
+    margin: 24px 18px 36px;
+  }
+  .about-intro,
+  .about-story,
+  .about-value-grid,
+  .project-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-intro-copy,
+  .about-story,
+  .about-values {
+    padding: 26px;
+  }
+  .about-photo {
+    height: 230px;
+    min-height: 0;
+    object-position: center 59%;
+  }
+  .about-story {
+    gap: 18px;
+  }
+  .about-page h2 {
+    font-size: 21px;
+  }
+  .about-value-grid {
+    gap: 26px;
+  }
+  .about-invitation {
+    margin: 0 26px 26px;
+    padding: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .about-invitation h2 {
+    font-size: 19px;
+  }
+  .about-invitation a.btn {
+    width: 100%;
+  }
+  .project-details summary {
+    padding: 22px 26px;
+  }
+  .project-details-content {
+    padding: 0 26px 26px;
+  }
 }

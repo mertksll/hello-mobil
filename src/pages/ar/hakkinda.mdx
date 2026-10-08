@@ -1,20 +1,41 @@
 ---
 layout: ../../layouts/Layout.astro
-title: "حول التطبيق | Kampus's Coffee"
+title: "من نحن | Kampus's Coffee"
 lang: ar
 ---
 
-import CanliRozet from '../../components/react/CanliRozet';
+import ProjeBilgileri from '../../components/react/ProjeBilgileri';
 
-<article className="info-page">
-<h1>حول التطبيق</h1>
-<h2>استراحة قهوة تصل إلى قاعتك</h2>
-<p>بدأ تطبيق Kampus's Coffee من مشكلة الانتظار في طابور المقهى بين المحاضرات. يختار الطلاب قهوتهم من مقهى واحد ويخصصونها ويجمعون الطلبات للقسم نفسه. يمكنك تنظيم خيارات القهوة وحفظ تفضيلاتك في مكان واحد.</p>
-<h2>المطوّر</h2>
-<p>Mustafa Mert Köksal · 2620511152 · تخصص تقنية أمن المعلومات · المدرسة المهنية بجامعة إستينيا. مقرر MYO063 لبرمجة تطبيقات الهاتف؛ المدرّس Keyvan Arasteh Abbasabad.</p>
-<h2>التقنيات</h2>
-<p>Tauri v2 وRust لطبقة التطبيق الأصلية؛ Astro للصفحات الثابتة؛ Svelte 5 للواجهة التفاعلية؛ React للعداد أدناه؛ MDX لصفحات المعلومات؛ Bun لإدارة الحزم والبناء.</p>
-<h2>خيارات القهوة</h2>
-<p>استكشف خيارات القهوة من Starbucks وKahve Dünyası وEspressolab، واختر الحجم والحليب واحفظ المفضلة لاستراحتك القادمة.</p>
-<CanliRozet client:load etiket="عدّاد استراحات القهوة" />
+<article className="info-page about-page">
+  <header className="about-intro">
+    <div className="about-intro-copy">
+      <p className="about-eyebrow">KAMPUS'S COFFEE · من نحن</p>
+      <h1>تجربة قهوة تناسب الحياة الجامعية.</h1>
+      <p className="about-lead">Kampus's Coffee تطبيق لطلبات القهوة، طُوّر لمساعدة الطلاب على إدارة تفضيلاتهم وطلباتهم الجماعية ومعلومات القاعات في مكان واحد.</p>
+    </div>
+    <img className="about-photo" src="/coffee/hero.webp" alt="لاتيه في كوب أخضر على طاولة خشبية" width="1600" height="2400" />
+  </header>
+  <section className="about-story" aria-labelledby="about-story-title">
+    <h2 id="about-story-title">فكرة بدأت من الاستراحات القصيرة</h2>
+    <p>بين المحاضرات والدراسة والحياة الاجتماعية، يبقى وقت استراحة القهوة ثمينًا. بدأت فكرة Kampus's Coffee من الرغبة في الاستفادة من هذا الوقت بشكل أفضل. هدفنا هو تبسيط اختيار القهوة وإعداد الطلب، وتقديم تجربة تناسب الحياة الجامعية.</p>
+  </section>
+  <section className="about-values" aria-labelledby="about-values-title">
+    <h2 id="about-values-title">احتياجاتكم اليومية في صميم التجربة</h2>
+    <div className="about-value-grid">
+      <section className="about-value"><span className="about-value-number" aria-hidden="true">01</span><h3>تفضيلات شخصية</h3><p>اختاروا حجم القهوة ونوع الحليب، واحفظوا مشروباتكم المفضلة للوصول إليها بسهولة.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">02</span><h3>طلبات جماعية</h3><p>يُحتسب خصم جماعي بنسبة 10% للطلبات التي تضم خمس قهوات أو أكثر من المقهى نفسه وللقاعة نفسها.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">03</span><h3>تخطيط بسيط</h3><p>احفظوا معلومات القاعة في الملف الشخصي، وأديروا السلة وسجلات الطلبات وتفضيلات القهوة من مكان واحد.</p></section>
+    </div>
+  </section>
+  <div className="about-invitation">
+    <h2>خططوا لاستراحة القهوة القادمة.</h2>
+    <a className="btn" href="/">استكشفوا القهوة</a>
+  </div>
+  <ProjeBilgileri
+    title="معلومات المشروع"
+    description="المطوّر والتقنيات المستخدمة"
+    facts={[["المطوّر", "Mustafa Mert Köksal"], ["الرقم الجامعي", "2620511152"], ["التخصص", "تقنية أمن المعلومات"], ["الجامعة", "المدرسة المهنية بجامعة إستينيا"], ["المقرر", "MYO063 · برمجة تطبيقات الهاتف"], ["المدرّس", "Keyvan Arasteh Abbasabad"]]}
+    technologyTitle="البنية التقنية"
+    technologyDescription="يوفر Tauri v2 وRust طبقة التطبيق، ويشكل Astro وMDX بنية الصفحات، بينما يوفر Svelte 5 وReact الواجهة التفاعلية. يُستخدم Bun لإدارة الحزم والبناء."
+  />
 </article>

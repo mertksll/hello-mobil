@@ -1,20 +1,41 @@
 ---
 layout: ../layouts/Layout.astro
-title: "Hakkında | Kampus's Coffee"
+title: "Hakkımızda | Kampus's Coffee"
 lang: tr
 ---
 
-import CanliRozet from '../components/react/CanliRozet';
+import ProjeBilgileri from '../components/react/ProjeBilgileri';
 
-<article className="info-page">
-<h1>Hakkında</h1>
-<h2>Kahve molasını sınıfına getiriyoruz</h2>
-<p>Kampus's Coffee, ders aralarında kafede sıra bekleme sorunundan doğdu. Öğrenciler bir kafeden kahve seçer, seçeneklerini belirler ve aynı sınıfa toplu sipariş verir. Sipariş seçeneklerini tek yerde düzenleyebilir, kahve tercihlerini kaydedebilirsin.</p>
-<h2>Geliştirici</h2>
-<p>Mustafa Mert Köksal · 2620511152 · Bilişim Güvenliği Teknolojisi · İstinye Üniversitesi Meslek Yüksekokulu. MYO063 Mobil Programlama; öğretim görevlisi Keyvan Arasteh Abbasabad.</p>
-<h2>Teknolojiler</h2>
-<p>Tauri v2 ve Rust: yerel uygulama katmanı; Astro: statik sayfalar; Svelte 5: etkileşimli arayüz; React: aşağıdaki sayaç; MDX: bilgi sayfaları; Bun: paketler ve derleme.</p>
-<h2>Kahve seçenekleri</h2>
-<p>Starbucks, Kahve Dünyası ve Espressolab kahvelerini keşfet; boyut ve süt tercihini seç, favorilerini bir sonraki molana sakla.</p>
-<CanliRozet client:load etiket="Kahve molası sayacı" />
+<article className="info-page about-page">
+  <header className="about-intro">
+    <div className="about-intro-copy">
+      <p className="about-eyebrow">KAMPUS'S COFFEE · Hakkımızda</p>
+      <h1>Kampüs hayatına eşlik eden kahve deneyimi.</h1>
+      <p className="about-lead">Kampus's Coffee, öğrencilerin kahve tercihlerini, toplu siparişlerini ve sınıf bilgilerini tek bir yerde yönetebilmesi için geliştirilen bir kahve sipariş uygulamasıdır.</p>
+    </div>
+    <img className="about-photo" src="/coffee/hero.webp" alt="Ahşap masa üzerinde yeşil fincanda latte" width="1600" height="2400" />
+  </header>
+  <section className="about-story" aria-labelledby="about-story-title">
+    <h2 id="about-story-title">Kısa molalardan doğan bir fikir</h2>
+    <p>Dersler, çalışma saatleri ve sosyal yaşam arasında kahve molasına ayrılan zaman değerlidir. Kampus's Coffee, bu zamanı daha iyi değerlendirme düşüncesinden doğdu. Amacımız, kahve seçimini ve sipariş hazırlığını sadeleştirerek kampüs yaşamına uyum sağlayan bir deneyim sunmaktır.</p>
+  </section>
+  <section className="about-values" aria-labelledby="about-values-title">
+    <h2 id="about-values-title">Deneyimin merkezinde siz varsınız</h2>
+    <div className="about-value-grid">
+      <section className="about-value"><span className="about-value-number" aria-hidden="true">01</span><h3>Kişisel tercihler</h3><p>Kahvenizin boyutunu ve süt seçeneğini belirleyin. Favorilerinizi kaydederek tercihlerinize kolayca ulaşın.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">02</span><h3>Birlikte sipariş</h3><p>Aynı kafeden ve aynı sınıfa verilen beş veya daha fazla kahvelik siparişlerde %10 toplu sipariş indirimi hesaplanır.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">03</span><h3>Kolay planlama</h3><p>Sınıf bilgilerinizi profilinize kaydedin; sepetinizi, sipariş kayıtlarınızı ve kahve tercihlerinizi tek yerden yönetin.</p></section>
+    </div>
+  </section>
+  <div className="about-invitation">
+    <h2>Bir sonraki kahve molanızı planlayın.</h2>
+    <a className="btn" href="/">Kahveleri keşfet</a>
+  </div>
+  <ProjeBilgileri
+    title="Proje bilgileri"
+    description="Geliştirici ve teknik altyapı"
+    facts={[["Geliştirici", "Mustafa Mert Köksal"], ["Öğrenci numarası", "2620511152"], ["Bölüm", "Bilişim Güvenliği Teknolojisi"], ["Üniversite", "İstinye Üniversitesi Meslek Yüksekokulu"], ["Ders", "MYO063 · Mobil Programlama"], ["Öğretim görevlisi", "Keyvan Arasteh Abbasabad"]]}
+    technologyTitle="Teknik altyapı"
+    technologyDescription="Tauri v2 ve Rust uygulama katmanını; Astro ve MDX sayfa yapısını; Svelte 5 ve React etkileşimli arayüzü oluşturur. Paket yönetimi ve derleme için Bun kullanılır."
+  />
 </article>
