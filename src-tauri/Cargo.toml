@@ -1,8 +1,8 @@
 [package]
 name = "hello-mobil"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Kampus Coffee educational order demo"
+authors = ["Mustafa Mert Köksal"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

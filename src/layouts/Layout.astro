@@ -1,44 +1,103 @@
 ---
-import { ClientRouter } from 'astro:transitions';
-import AppHeader from '../components/AppHeader.svelte';
-import AppNav from '../components/AppNav.svelte';
-import '../styles/app.css';
-
+import AppHeader from "../components/AppHeader.svelte";
+import AppNav from "../components/AppNav.svelte";
+import "../styles/app.css";
 interface Props {
   title?: string;
+  lang?: string;
+  frontmatter?: { title?: string; lang?: string };
 }
-
-const { title = "PassoKlon" } = Astro.props;
-const currentPath = Astro.url.pathname;
+const { frontmatter = {} } = Astro.props;
+const title = Astro.props.title ?? frontmatter.title ?? "Kampus's Coffee";
+const lang = Astro.props.lang ?? frontmatter.lang ?? "tr";
+const labels: Record<string, string[]> = {
+  tr: [
+    "Hakkında",
+    "İletişim",
+    "Kullanım koşulları",
+    "Gizlilik",
+    "Eğitim demosu · Kampüsün kahvesi, sınıfının kapısında.",
+  ],
+  en: [
+    "About",
+    "Contact",
+    "Terms of use",
+    "Privacy",
+    "Educational demo · Campus coffee at your classroom door.",
+  ],
+  ar: [
+    "حول التطبيق",
+    "تواصل معنا",
+    "شروط الاستخدام",
+    "الخصوصية",
+    "نموذج تعليمي · قهوة الجامعة إلى باب قاعتك.",
+  ],
+  fa: [
+    "درباره",
+    "تماس",
+    "شرایط استفاده",
+    "حریم خصوصی",
+    "نمونه آموزشی · قهوه دانشگاه تا در کلاس شما.",
+  ],
+};
+const words = labels[lang] ?? labels.tr;
+const pages = ["hakkinda", "iletisim", "kosullar", "gizlilik"];
+const current = Astro.url.pathname.split("/").filter(Boolean).at(-1) ?? "hakkinda";
+const info = pages.includes(current) ? current : "hakkinda";
+const prefix = lang === "tr" ? "" : "/" + lang;
 ---
 
 <!doctype html>
-<html lang="tr">
+<html lang={lang} dir={["ar", "fa"].includes(lang) ? "rtl" : "ltr"}>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="description" content={words[4]} />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
     <script is:inline>
-      // Adım 15: Açılışta renk yanıp sönmesini engellemek için temayı anında uygula
-      document.documentElement.dataset.tema =
-        localStorage.getItem("tema") ??
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "gece" : "gunduz");
+      try {
+        const t = localStorage.getItem("tema");
+        document.documentElement.dataset.tema =
+          t === "gece" || (t !== "gunduz" && matchMedia("(prefers-color-scheme:dark)").matches)
+            ? "gece"
+            : "gunduz";
+      } catch {
+        document.documentElement.dataset.tema = "gunduz";
+      }
     </script>
-    <ClientRouter />
   </head>
   <body>
-    <AppHeader client:load />
-    <main>
+    <AppHeader client:load lang={lang} />
+    <main id="main">
       <slot />
     </main>
-    <AppNav client:load currentPath={currentPath} />
+    <footer class="site-footer">
+      <nav class="info-nav" aria-label={words[0]}>
+        {pages.map((page, i) => (
+          <a href={`${prefix}/${page}/`}>{words[i]}</a>
+        ))}
+      </nav>
+      <nav class="language-nav" aria-label="Language / Dil">
+        {[
+          ["tr", "Türkçe"],
+          ["en", "English"],
+          ["ar", "العربية"],
+          ["fa", "فارسی"],
+        ].map(([code, name]) => (
+          <a
+            href={`${code === "tr" ? "" : "/" + code}/${info}/`}
+            lang={code}
+            hreflang={code}
+            aria-current={lang === code ? "page" : undefined}
+          >
+            {name}
+          </a>
+        ))}
+      </nav>
+      <p class="muted">{words[4]}</p>
+    </footer>
+    <AppNav client:load lang={lang} currentPath={Astro.url.pathname} />
   </body>
 </html>
-
-<style>
-  main {
-    padding-bottom: calc(80px + env(safe-area-inset-bottom));
-    min-height: 100vh;
-  }
-</style>
