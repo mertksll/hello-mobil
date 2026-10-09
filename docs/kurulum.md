@@ -1,38 +1,37 @@
-# Kurulum ve Çalıştırma
+# Kurulum ve çalıştırma
 
-### Ön Gereksinimler
-- [Bun](https://bun.sh/) kurulu olmalıdır (`curl -fsSL https://bun.sh/install | bash`).
-- [Rust & Cargo](https://rustup.rs/) kurulu olmalıdır.
-- İşletim sisteminize göre [Tauri Önkoşulları](https://v2.tauri.app/start/prerequisites/) tamamlanmış olmalıdır.
+## Önkoşullar
 
-### Adım Adım Çalıştırma
+Web: Git, **Node.js 22.12 veya üstü**, Bun 1.3 veya üstü. Bu çalışma Bun 1.4.2 ile hazırlanmıştır. Astro 7, Node 20.11 ile çalışmaz; yalnızca Bun kurmak Node sürümünü yükseltmez.
 
-1. **Depoyu klonlayın:**
+Native: [Tauri önkoşulları](https://v2.tauri.app/start/prerequisites/), Rust/Cargo, Windows'ta MSVC C++ Build Tools ve WebView2; diğer platform araçları [mimari belgede](mimari-agac.md). Bu bilgisayarda Rust/Cargo bulunmadığından native çalıştırma doğrulanmamıştır.
+
+## Komutlar
+
 ```bash
-git clone https://github.com/keyvanarasteh/hello-mobil.git
+git clone https://github.com/mertksll/hello-mobil.git
 cd hello-mobil
-```
-
-2. **Bağımlılıkları yükleyin:**
-```bash
 bun install
-```
-
-3. **Web geliştirme sunucusunu başlatın:**
-```bash
 bun run dev
 ```
-> Tarayıcınızda [http://127.0.0.1:1420](http://127.0.0.1:1420) adresinde açılır.
 
-4. **Tauri masaüstü/mobil penceresinde çalıştırın:**
-```bash
-bun run tauri dev
-```
+Geliştirme adresi: http://127.0.0.1:1420. Sunucuyu Ctrl+C ile durdurun.
 
-5. **Üretim sürümünü statik olarak derleyin:**
 ```bash
 bun run build
+bun run preview
 ```
-> Çıktılar `dist/` klasörüne üretilir ve Tauri tarafından paketlenir.
 
----
+`build` statik `dist/` çıktısını üretir. Önizleme komutunun terminalde verdiği yerel adrese gidin.
+
+```bash
+bun run check
+bun run test
+bun run tauri dev
+bun run tauri build
+bun run tauri icon assets/app-icon.png
+```
+
+İlk iki komut Svelte/TypeScript ve iş kurallarını kontrol eder. Tauri dev/build, native önkoşullar tamamlandıktan sonra çalıştırılır; web build bu araçların yerine geçmez. Mobil için ayrıca `bun run tauri android init` / `bun run tauri ios init` ve platform kurulumu gerekir.
+
+Kurulumda port kullanılıyorsa eski geliştirme sunucusunu kapatın; 1420 portunu değiştirmeyin. Depo klasörüne `.env`, parola veya erişim anahtarı eklemeyin. [Doğrulama kanıtları](teslim.md).
