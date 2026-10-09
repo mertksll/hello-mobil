@@ -1,66 +1,67 @@
-Date: 2026-10-09T03:18:48+03:00
+Date: 2026-10-09T03:35:56+03:00
 Command: bun run build
 Exit code: 0
 
 $ astro build
-03:18:47 [types] Generated 53ms
-03:18:47 [build] output: "static"
-03:18:47 [build] mode: "static"
-03:18:47 [build] directory: C:\Users\ROG\Documents\Codex\2026-10-07\merhaba-bug-nk-dersimizi-lab-da\work\9-ekim\source\hello-mobil-master\dist\
-03:18:47 [build] Collecting build info...
-03:18:47 [build] ✓ Completed in 103ms.
-03:18:48 [build] Building static entrypoints...
-03:18:48 [vite] ✓ built in 334ms
-03:18:48 [vite] ✓ built in 172ms
-03:18:48 [build] Rearranging server assets...
+03:35:54 [vite] Re-optimizing dependencies because vite config has changed
+03:35:55 [types] Generated 442ms
+03:35:55 [build] output: "static"
+03:35:55 [build] mode: "static"
+03:35:55 [build] directory: C:\Users\ROG\Documents\Codex\2026-10-07\merhaba-bug-nk-dersimizi-lab-da\work\9-ekim\source\hello-mobil-master\dist\
+03:35:55 [build] Collecting build info...
+03:35:55 [build] ✓ Completed in 533ms.
+03:35:55 [build] Building static entrypoints...
+03:35:56 [vite] ✓ built in 610ms
+03:35:56 [vite] ✓ built in 270ms
+03:35:56 [build] Rearranging server assets...
 
  generating static routes 
-03:18:48   ├─ /ar/gizlilik/index.html (+14ms) 
-03:18:48   ├─ /ar/hakkinda/index.html (+10ms) 
-03:18:48   ├─ /ar/iletisim/index.html (+5ms) 
-03:18:48   ├─ /ar/kosullar/index.html (+4ms) 
-03:18:48   ├─ /en/gizlilik/index.html (+3ms) 
-03:18:48   ├─ /en/hakkinda/index.html (+3ms) 
-03:18:48   ├─ /en/iletisim/index.html (+2ms) 
-03:18:48   ├─ /en/kosullar/index.html (+2ms) 
-03:18:48   ├─ /fa/gizlilik/index.html (+3ms) 
-03:18:48   ├─ /fa/hakkinda/index.html (+3ms) 
-03:18:48   ├─ /fa/iletisim/index.html (+3ms) 
-03:18:48   ├─ /fa/kosullar/index.html (+2ms) 
-03:18:48   ├─ /gizlilik/index.html (+2ms) 
-03:18:48   ├─ /hakkinda/index.html (+2ms) 
-03:18:48   ├─ /iletisim/index.html (+2ms) 
-03:18:48   ├─ /kosullar/index.html (+2ms) 
-03:18:48   ├─ /profil/index.html (+6ms) 
-03:18:48   ├─ /sepet/index.html (+2ms) 
-03:18:48   ├─ /siparisler/index.html (+2ms) 
-03:18:48   ├─ /urun/1/index.html (+2ms) 
-03:18:48   ├─ /urun/2/index.html (+1ms) 
-03:18:48   ├─ /urun/3/index.html (+1ms) 
-03:18:48   ├─ /urun/4/index.html (+1ms) 
-03:18:48   ├─ /urun/5/index.html (+1ms) 
-03:18:48   ├─ /urun/6/index.html (+1ms) 
-03:18:48   ├─ /urun/7/index.html (+1ms) 
-03:18:48   ├─ /urun/8/index.html (+1ms) 
-03:18:48   ├─ /urun/9/index.html (+1ms) 
-03:18:48   ├─ /urun/10/index.html (+1ms) 
-03:18:48   ├─ /urun/11/index.html (+1ms) 
-03:18:48   ├─ /urun/12/index.html (+1ms) 
-03:18:48   ├─ /urun/13/index.html (+1ms) 
-03:18:48   ├─ /urun/14/index.html (+1ms) 
-03:18:48   ├─ /urun/15/index.html (+1ms) 
-03:18:48   ├─ /urun/16/index.html (+1ms) 
-03:18:48   ├─ /urun/17/index.html (+1ms) 
-03:18:48   ├─ /urun/18/index.html (+1ms) 
-03:18:48   ├─ /urun/19/index.html (+1ms) 
-03:18:48   ├─ /urun/20/index.html (+1ms) 
-03:18:48   ├─ /urun/21/index.html (+1ms) 
-03:18:48   ├─ /urun/22/index.html (+1ms) 
-03:18:48   ├─ /urun/23/index.html (+2ms) 
-03:18:48   ├─ /urun/24/index.html (+1ms) 
-03:18:48   ├─ /index.html (+3ms) 
-03:18:48 ✓ Completed in 175ms.
+03:35:56   ├─ /ar/gizlilik/index.html (+29ms) 
+03:35:56   ├─ /ar/hakkinda/index.html (+30ms) 
+03:35:56   ├─ /ar/iletisim/index.html (+9ms) 
+03:35:56   ├─ /ar/kosullar/index.html (+10ms) 
+03:35:56   ├─ /en/gizlilik/index.html (+5ms) 
+03:35:56   ├─ /en/hakkinda/index.html (+4ms) 
+03:35:56   ├─ /en/iletisim/index.html (+3ms) 
+03:35:56   ├─ /en/kosullar/index.html (+3ms) 
+03:35:56   ├─ /fa/gizlilik/index.html (+4ms) 
+03:35:56   ├─ /fa/hakkinda/index.html (+3ms) 
+03:35:56   ├─ /fa/iletisim/index.html (+2ms) 
+03:35:56   ├─ /fa/kosullar/index.html (+2ms) 
+03:35:56   ├─ /gizlilik/index.html (+2ms) 
+03:35:56   ├─ /hakkinda/index.html (+3ms) 
+03:35:56   ├─ /iletisim/index.html (+2ms) 
+03:35:56   ├─ /kosullar/index.html (+2ms) 
+03:35:56   ├─ /profil/index.html (+16ms) 
+03:35:56   ├─ /sepet/index.html (+3ms) 
+03:35:56   ├─ /siparisler/index.html (+2ms) 
+03:35:56   ├─ /urun/1/index.html (+2ms) 
+03:35:56   ├─ /urun/2/index.html (+2ms) 
+03:35:56   ├─ /urun/3/index.html (+1ms) 
+03:35:56   ├─ /urun/4/index.html (+1ms) 
+03:35:56   ├─ /urun/5/index.html (+2ms) 
+03:35:56   ├─ /urun/6/index.html (+1ms) 
+03:35:56   ├─ /urun/7/index.html (+1ms) 
+03:35:56   ├─ /urun/8/index.html (+1ms) 
+03:35:56   ├─ /urun/9/index.html (+1ms) 
+03:35:56   ├─ /urun/10/index.html (+1ms) 
+03:35:56   ├─ /urun/11/index.html (+1ms) 
+03:35:56   ├─ /urun/12/index.html (+1ms) 
+03:35:56   ├─ /urun/13/index.html (+1ms) 
+03:35:56   ├─ /urun/14/index.html (+1ms) 
+03:35:56   ├─ /urun/15/index.html (+1ms) 
+03:35:56   ├─ /urun/16/index.html (+1ms) 
+03:35:56   ├─ /urun/17/index.html (+1ms) 
+03:35:56   ├─ /urun/18/index.html (+1ms) 
+03:35:56   ├─ /urun/19/index.html (+1ms) 
+03:35:56   ├─ /urun/20/index.html (+1ms) 
+03:35:56   ├─ /urun/21/index.html (+1ms) 
+03:35:56   ├─ /urun/22/index.html (+1ms) 
+03:35:56   ├─ /urun/23/index.html (+1ms) 
+03:35:56   ├─ /urun/24/index.html (+1ms) 
+03:35:56   ├─ /index.html (+4ms) 
+03:35:56 ✓ Completed in 362ms.
 
-03:18:48 [build] ✓ Completed in 752ms.
-03:18:48 [build] 44 page(s) built in 872ms
-03:18:48 [build] Complete!
+03:35:56 [build] ✓ Completed in 1.33s.
+03:35:56 [build] 44 page(s) built in 2.04s
+03:35:56 [build] Complete!

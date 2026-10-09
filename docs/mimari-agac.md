@@ -36,7 +36,7 @@ Akış: keşfet → kahve seçenekleri → tek kafeli sepet → örnek sınıf v
 | Platform | Sistem | Hedef çıktı | Gereken araçlar / durum |
 |---|---|---|---|
 | macOS | Apple Silicon / Intel | .dmg, .app | macOS + Xcode araçları; native test bekliyor |
-| Windows | 10 / 11 x64 | .msi, .exe | Rust MSVC, C++ Build Tools, WebView2; native test bekliyor |
+| Windows | 10 / 11 x64 | .msi, .exe | Rust MSVC, C++ Build Tools, WebView2; Windows x64 debug derlemesi ve süreç başlangıcı doğrulandı, dağıtım paketi bekliyor |
 | Linux | Ubuntu / Debian | .deb, .AppImage | Rust, WebKitGTK ve sistem paketleri; native test bekliyor |
 | iOS | iPhone / iPad | .ipa | macOS, Xcode, imzalama; native test bekliyor |
 | Android | Telefon / tablet | .apk, .aab | Android Studio, SDK/NDK/JDK, Rust target; native test bekliyor |
