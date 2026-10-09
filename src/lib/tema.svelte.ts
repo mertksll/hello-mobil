@@ -1,24 +1,19 @@
-// Adım 15: Tema (gece / gündüz) — seçim localStorage'da saklanır
 export type Tema = "gunduz" | "gece";
-
-const ANAHTAR = "tema";
-
 class TemaYonetici {
-  mod = $state<Tema>(
-    typeof document !== "undefined" && document.documentElement.dataset.tema === "gece"
-      ? "gece"
-      : "gunduz"
-  );
-
+  mod = $state<Tema>("gunduz");
+  oku() {
+    if (typeof document !== "undefined")
+      this.mod = document.documentElement.dataset.tema === "gece" ? "gece" : "gunduz";
+  }
   degistir() {
-    this.mod = this.mod === "gece" ? "gunduz" : "gece";
-    if (typeof document !== "undefined") {
-      document.documentElement.dataset.tema = this.mod;
-    }
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem(ANAHTAR, this.mod);
+    if (typeof document === "undefined") return;
+    this.mod = document.documentElement.dataset.tema === "gece" ? "gunduz" : "gece";
+    document.documentElement.dataset.tema = this.mod;
+    try {
+      localStorage.setItem("tema", this.mod);
+    } catch {
+      /* Tema bu oturumda kullanılmaya devam eder. */
     }
   }
 }
-
 export const tema = new TemaYonetici();

@@ -1,34 +1,47 @@
-# Marka ve Tasarım Kılavuzu
+# Kampus's Coffee — Marka ve Tasarım Kılavuzu
 
-> ✍️ **Öğrenci Görevi:** Bu taslağı belirlediğiniz marka kimliği ve renklerine göre doldurun. Ayrıntılı yönerge için [`docs/tasks/week-3/05-branding.task.md`](tasks/week-3/05-branding.task.md) dosyasını inceleyin.
+Slogan: **Kampüsün kahvesi, sınıfının kapısında.** Kahve kahverengisi, süt beyazı ve sıcak krem tonları; sade bir fincan ve iki buhar çizgisi. Logo özgün SVG çizimidir; işletme logoları kullanılmaz.
 
----
+## Renk token'ları
+Kontrast sütunu açık / koyu sırasındadır. WCAG sRGB bağıl parlaklık formülü ile hesaplanmıştır; CSS'nin iki temasıyla birebir eşleşir.
 
-## 1. Marka Renk Paleti
-
-Aşağıdaki tabloyu doldurun ve belirlediğiniz renkleri `src/styles/app.css` içerisine aktarın:
-
-| Kullanım Alanı | CSS Değişkeni | Açık Mod (Gündüz) | Koyu Mod (Gece) | Açıklama |
+| Token | Açık hex | Koyu hex | Kullanım | Ölçülen kontrast / karşılaştırılan token |
 |---|---|---|---|---|
-| **Ana Renk (Primary)** | `--renk-ana` | `#[Renk Kodu]` | `#[Renk Kodu]` | Butonlar, aktif sekme, marka vurgusu |
-| **Koyu / Üst Bar** | `--renk-koyu` | `#[Renk Kodu]` | `#[Renk Kodu]` | Başlık alanı arka planı |
-| **Sayfa Zemini** | `--zemin` | `#[Renk Kodu]` | `#[Renk Kodu]` | Sayfa genel arka planı |
-| **Kart Yüzeyi** | `--kart` | `#[Renk Kodu]` | `#[Renk Kodu]` | Liste kartları, form alanları |
-| **Ana Yazı** | `--yazi` | `#[Renk Kodu]` | `#[Renk Kodu]` | Başlıklar ve okunabilir metin |
-| **Soluk Yazı** | `--yazi-soluk` | `#[Renk Kodu]` | `#[Renk Kodu]` | Açıklamalar, tarihler, etiketler |
-| **Kenarlık** | `--kenar` | `#[Renk Kodu]` | `#[Renk Kodu]` | Çizgiler, input sınırları |
+| `--renk-ana` | `#6B3F2A` | `#E7B993` | Ana düğme, aktif bağlantı | 8.86:1 / 8.96:1 (--kart) |
+| `--renk-koyu` | `#2D211B` | `#181310` | Vurgu alanı | 1.00:1 / 16.83:1 (--yazi); dekoratif token, metin çifti olarak kullanılmaz |
+| `--zemin` | `#F8F4EF` | `#181310` | Sayfa zemini | 14.26:1 / 16.83:1 (--yazi) |
+| `--kart` | `#FFFFFF` | `#28201B` | Kart ve form zemini | 15.61:1 / 14.61:1 (--yazi) |
+| `--yazi` | `#2D211B` | `#F8F4EF` | Ana yazı | 15.61:1 / 14.61:1 (--kart) |
+| `--yazi-soluk` | `#69584C` | `#CCBBAE` | Yardımcı yazı | 6.77:1 / 8.60:1 (--kart) |
+| `--kenar` | `#D9CABC` | `#655447` | Dekoratif ayırıcı | 9.76:1 / 6.58:1 (--yazi); dekoratif token, metin çifti olarak kullanılmaz |
+| `--vurgu` | `#E7D5BE` | `#3D3026` | Kahve görsel alanı | 10.90:1 / 11.63:1 (--yazi) |
+| `--logo-zemin` | `#E7D5BE` | `#E7D5BE` | Sabit logo zemini | 6.19:1 / 6.19:1 (SVG fincan rengi) |
+| `--ana-uzeri` | `#FFFFFF` | `#241912` | Ana renk üzerindeki yazı | 8.86:1 / 9.62:1 (--renk-ana) |
 
----
+Ana yazı / zemin: 14.26:1 / 16.83:1.
+Soluk yazı / zemin: 6.18:1 / 9.91:1.
+Metin çiftleri normal metin için en az 4.5:1 hedefler. Kenarlık dekoratiftir; form kontrolleri ayrıca --yazi-soluk sınır kullanır. Logo dekoratiftir ve sabit açık vurgu zemini üzerinde gösterilir.
 
-## 2. Tipografi ve Yuvarlaklık
+Logo zemin tokenı `--logo-zemin`: açık `#E7D5BE`, koyu `#E7D5BE`; SVG fincanın sabit dekoratif arka planıdır. Fincan rengi ile ölçülen kontrast: 6.19:1.
 
-- **Yazı Tipi (Font):** System UI (`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`)
-- **Köşe Yuvarlaklığı (`--radius`):** `[Örn: 12px / 14px / 16px]`
+## Tipografi ve ölçüler
+System UI / Segoe UI / sans-serif; harici font isteği yok. `--radius: 14px` iki temada aynıdır. Etkileşim hedefleri en az 44 px; klavye odağı görünür. Hareket azaltma tercihi desteklenir. Düzen eşikleri [mimari belgede](mimari-agac.md).
 
----
+## İkon kaynağı ve çıktılar
+`public/logo.svg` → `assets/app-icon.png` (1024×1024 RGBA, şeffaf köşeler).
+Logo renkleri paletin #6B3F2A ve #E7D5BE token değerleridir.
 
-## 3. Logo ve İkon Tanımı
+```bash
+bun run tauri icon assets/app-icon.png
+```
 
-- **Logo Metni / Simgesi:** [Uygulamanızın logosu ne olacak?]
-- **Logo Dosyası:** `public/[logo-adi.svg]`
-- **Tauri Launcher İkonu:** `src-tauri/icons/`
+| Platform | Konum | Çıktı |
+|---|---|---|
+| macOS | src-tauri/icons/icon.icns | Çok çözünürlüklü ICNS |
+| Windows | src-tauri/icons/icon.ico | 16–256 px ICO |
+| Linux | src-tauri/icons/ | 32, 128, 256, 512 px PNG |
+| iOS | src-tauri/icons/ios/ | AppIcon PNG seti |
+| Android | src-tauri/icons/android/ | mipmap-mdpi–xxxhdpi ve adaptive XML |
+| Web | public/favicon.png; public/apple-touch-icon.png | 32 px; 180 px |
+
+Native paketlerin platform araçlarıyla derlenmesi ikon üretiminden ayrı bir iştir; durum [teslim belgesinde](teslim.md).
