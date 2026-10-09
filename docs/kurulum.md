@@ -9,8 +9,8 @@ Native: [Tauri önkoşulları](https://v2.tauri.app/start/prerequisites/), Rust 
 ## Komutlar
 
 ```bash
-git clone https://github.com/mertksll/hello-mobil.git
-cd hello-mobil
+git clone https://github.com/mertksll/kampus-coffee.git
+cd kampus-coffee
 bun install
 bun run dev
 ```

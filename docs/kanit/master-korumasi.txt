@@ -1,0 +1,19 @@
+Date: 2026-10-09T23:37:53.067Z
+Protected master direct push
+Command equivalent: git push origin feature/master-korumasi:master
+Actual Git receive-pack push to refs/heads/master from the feature branch; local master was not committed or rewritten.
+
+{
+  "base": "7a05fb0ab6dc4c874d6a194f9abf3e44ab0178a1",
+  "attemptedCommit": "c0c28a32b8f5b15fa3287304a85c50d058cf42e6",
+  "error": "One or more branches were not updated: \n  - refs/heads/master: push declined due to repository rule violations",
+  "messages": [
+    "\u0000error: GH013: Repository rule violations found for refs/heads/master.\n",
+    "Review all repository rules at https://github.com/mertksll/kampus-coffee/rules?ref=refs%2Fheads%2Fmaster\n",
+    "\n",
+    "- Changes must be made through a pull request.\n",
+    "\n"
+  ],
+  "masterAfter": "7a05fb0ab6dc4c874d6a194f9abf3e44ab0178a1"
+}
+PASS: remote master stayed unchanged.

@@ -2,7 +2,7 @@
 
 ## Önce oku
 Bu depo İstinye Üniversitesi MYO063 dersinin Kampus's Coffee eğitim demosudur.
-Kullanıcıya ait kaynak: https://github.com/mertksll/hello-mobil.
+Kullanıcıya ait kaynak: https://github.com/mertksll/kampus-coffee.
 
 ## Tek kaynaklı belgeler
 | Belge | Kapsam |
@@ -12,9 +12,10 @@ Kullanıcıya ait kaynak: https://github.com/mertksll/hello-mobil.
 | [Klasör mimarisi](docs/klasor-mimarisi.md) | Klasör ağacının tek kaynağı |
 | [Sayfa mimarisi](docs/mimari-agac.md) | Rotalar, platformlar ve duyarlı düzen |
 | [Kurulum](docs/kurulum.md) | Önkoşullar ve komutlar |
-| [Kurallar](docs/kurallar.md) | Demo iş kuralları |
+| [Kurallar](docs/kurallar.md) | İş kuralları ve PR güvenliği |
 | [Kaynaklar](docs/kaynaklar.md) | Resmi kaynaklar |
 | [Teslim](docs/teslim.md) | Kontrol listesi ve kalan işler |
+| [Hafta 4 görevleri](docs/tasks/week-4/) | Öğretim görevlisinin Batch 02 yönergeleri |
 | [Hafta 3 görevleri](docs/tasks/week-3/) | Öğretim görevlisinin özgün yönergeleri |
 
 Belgelerdeki renk tablosunu veya ağaçları README ve diğer belgelere kopyalama; bağlantı ver.
@@ -31,6 +32,7 @@ Renk değiştirirken branding tablosu ve iki CSS temasını eşleştir, kontrast
 Yeni sayfayı navigasyona, mimari-ağaç belgesine ve gerekiyorsa dil bağlantılarına ekle.
 
 ## Git ve doğrulama
+[PR güvenliği](docs/kurallar.md#pr-güvenliği) kurallarını uygula.
 master/main üzerine doğrudan commit atma. Yeni görevlerde feature/<ad> veya fix/<ad> dalı aç; belge düzeltmelerini de bu dallar üzerinden sun.
 feat:, fix:, docs: gibi Conventional Commit başlıkları kullan.
 Her görev dalını GitHub PR ile sun; açıklamada yapılan değişiklik ve AI görevini 2–3 cümlede belirt.
@@ -40,4 +42,4 @@ Komutlar: bun install; bun run dev; bun run build; bun run check; bun run test; 
 Derleme kanıtını docs/kanit/ altında tut. Native test yapılamadıysa açıkça yaz.
 Blackboard'a teslimi öğrenci yapar; ajan teslim etmez ve öğretmene mesaj göndermez.
 
-Teslim etiketi, tüm PR’lar birleştirildikten sonra son doğrulanmış master commitini göstermelidir. Etiket ve ZIP içeriğini karşılaştır. Git geçmişindeki eski PR’siz işlemleri gizleme veya yeniden yazma; teslim kaydında kapsamını açıkça belirt.
+Her batch teslim etiketi, o batch tamamlandığında doğrulanmış master commitini göstermelidir. Değerlendirilmiş batch etiketini sonraki görevler için taşıma. Yeni ZIP'i kendi kaynak commitiyle karşılaştır; bir etiket ZIP'i ise etiketin hedefiyle eşleştir. Git geçmişindeki eski PR’siz işlemleri gizleme veya yeniden yazma; teslim kaydında kapsamını açıkça belirt.
