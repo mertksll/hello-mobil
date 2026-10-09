@@ -55,7 +55,7 @@ Ders arasında sırada bekleyen öğrenciler için kafe ve kahve seçimini, sın
 - Açık / koyu tema, farklı ekranlara uyumlu görünüm.
 - TR / EN / AR / FA bilgi sayfaları, sağdan sola dil desteği ve demo iletişim formu.
 
-Kafe adları örnektir; ortaklık veya gerçek entegrasyon yoktur. Ödeme, gerçek kurye ve sunucu hesabı bu aşamanın kapsamı dışındadır. Web demosunda kod tarayıcıda; Tauri sürümünde `siparis_olustur` Rust komutuyla üretilir. Native derleme henüz doğrulanmamıştır. Ayrıntılar: [proje fikri](docs/proje-fikri.md), [iş kuralları](docs/kurallar.md), [teslim durumu](docs/teslim.md).
+Kafe adları örnektir; ortaklık veya gerçek entegrasyon yoktur. Ödeme, gerçek kurye ve sunucu hesabı bu aşamanın kapsamı dışındadır. Web demosunda kod tarayıcıda; Tauri sürümünde `siparis_olustur` Rust komutuyla üretilir. Windows x64 üzerinde `bun run tauri dev` derlemesi ve uygulama sürecinin başlatılması doğrulandı; [çalıştırma kaydı](docs/kanit/tauri-dev.txt). Android/iOS ve dağıtım paketleri henüz doğrulanmadı. Ayrıntılar: [proje fikri](docs/proje-fikri.md), [iş kuralları](docs/kurallar.md), [teslim durumu](docs/teslim.md).
 
 <a id="teknolojiler"></a>
 ## Teknolojiler

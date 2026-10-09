@@ -2,21 +2,21 @@
 
 Öğrenci: Mustafa Mert Köksal · 2620511152 · mertksll. Proje: **Kampus's Coffee**.
 
-Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; geliştirme PR’ları ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. Bu teslim sürümünün etiketi `v0.1.0-batch-01` olarak belirlenmiştir. Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; yüklemeyi öğrenci yapacak.
+Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; geliştirme PR’ları ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. İlk Batch 01 sürümünün etiketi `v0.1.0-batch-01` olarak korunur; ek Tauri kanıtını içeren teslim kaynağı güncel `master` dalıdır. Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; yüklemeyi öğrenci yapacak.
 
 ## Dokuz maddelik kontrol matrisi
 
 | No | Alan | Durum | Kanıt |
 |---|---|---|---|
-| 1 | Fork ve davet | Fork doğrulandı; davet gönderildi | [Fork](https://github.com/mertksll/hello-mobil); kaynak commit f3ba476. Öğrenci daveti gönderdiğini bildirdi; önceki kontrolde kabul bekliyordu. |
-| 2 | 7 Ekim Blackboard bildirimi | Öğrenci beyanıyla tamamlandı | Öğrenci sohbette gönderdiğini bildirdi; bu oturumda Blackboard açılmadı. |
+| 1 | Fork ve davet | Fork ve eğitmen erişimi doğrulandı | [Fork](https://github.com/mertksll/hello-mobil); kaynak commit f3ba476. 9 Ekim GitHub kontrolünde keyvanarasteh işbirlikçi erişimi doğrulandı. |
+| 2 | 7 Ekim Blackboard bildirimi | Öğrenci beyanıyla tamamlandı | Öğrenci sohbette gönderdiğini bildirdi; 7 Ekim bildiriminin gönderildiği öğrenci beyanına dayanır; 9 Ekim ZIP teslimi ayrıdır. |
 | 3 | Proje fikri | Hazır | [Amaç ve ekranlar](proje-fikri.md) |
 | 4 | README | GitHub ana dalında | [README](../README.md); README için ayrı [PR #4](https://github.com/mertksll/hello-mobil/pull/4) birleştirildi. |
 | 5 | Ajan dosyaları | GitHub ana dalında | [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) |
 | 6 | Markalama ve ikonlar | GitHub ana dalında | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
 | 7 | Dört dilde bilgi sayfaları | 16 sayfa derlendi | [Build kaydı](kanit/build.txt), [form etkileşim testi](kanit/dom-test.txt) |
 | 8 | Mimari ağaç | GitHub ana dalında | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
-| 9 | Derleme | Başarılı, çıkış kodu 0; ekran görüntüsü eklendi | [Gerçek terminal ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt) |
+| 9 | Derleme | Web build çıkış 0; Windows Tauri dev derlendi ve açıldı | [Gerçek terminal ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt), [Tauri ekran görüntüsü](kanit/tauri-dev.png), [Tauri kaydı](kanit/tauri-dev.txt) |
 
 ## Doğrulama kapsamı
 
@@ -28,7 +28,7 @@ Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; gelişti
 - Statik audit: 44 rotanın dil/yönü, MDX stilleri, yerel bağlantılar, CSS-belge token eşleşmesi, kullanılan metin çiftlerinde en az 4.5:1 kontrast, ikon dosyaları ve ölçüleri.
 - Öğrencinin paylaştığı gerçek terminal ekran görüntüsü değiştirilmeden [docs/kanit/build.png](kanit/build.png) olarak eklendi. Görüntüde `bun run build`, 44 sayfa, `Complete!` ve `Exit code: 0` okunuyor. Metin build kaydı, ajanın ayrı derleme çalıştırmasına aittir.
 - Chrome kontrol aracı oturum başlatma hatası verdi; tüm ekranların görsel tarayıcı kontrolü hâlâ doğrulanmadı.
-- Rust/Cargo ve platform geliştirme araçları kurulu olmadığından native uygulama çalıştırması ve APK/IPA/EXE/DMG üretimi doğrulanmadı. Bu ilk aşamada kaynak kod ve ikon setleri hazırlandı.
+- Windows x64 üzerinde `bun run tauri dev` başarıyla derlendi; `target/debug/hello-mobil.exe` süreci ve “Kampus's Coffee” pencere başlığı doğrulandı. [Tauri çalıştırma kaydı](kanit/tauri-dev.txt). Öğrencinin paylaştığı [gerçek Tauri ekran görüntüsü](kanit/tauri-dev.png) değiştirilmeden eklendi; görüntüde derleme sonucu, çalıştırılan EXE ve açılan arayüz görülüyor; Android/iOS ve MSI/DMG gibi dağıtım paketleri üretilmedi.
 
 ## Ajan uyumu kontrolü
 
@@ -56,13 +56,13 @@ Dal bazındaki doğrulama özeti: [PR derlemeleri](kanit/pr-builds.txt). Bu doğ
 
 ## Batch 01 sürüm bilgisi
 
-Bu teslim sürümünün etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/hello-mobil/tree/v0.1.0-batch-01).
+İlk Batch 01 sürümünün etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/hello-mobil/tree/v0.1.0-batch-01).
 Etiket, PR'larla birleştirilmiş `master` commitini işaret eden açıklamalı Git etiketi olarak kullanılır. Açıklaması: “Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı”.
 
 ## Kalan teslim adımları
 
-1. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
-2. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
+1. GitHub'da **master → Code → Download ZIP** ile güncel kaynak arşivini indir. Önceden indirilen `v0.1.0-batch-01` arşivi bu ek Tauri kanıtını içermez.
+2. Öğrenci Blackboard'a yalnızca güncel ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
 
 Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmez. Blackboard teslimi yapılmadan bu adımı tamamlandı olarak değiştirmeyin.
 
@@ -79,3 +79,9 @@ Kullanıcı isteğiyle görünür demo/eğitim etiketleri sadeleştirildi. Profi
 ## Hakkında sayfası
 
 Hakkında içeriği dört dilde kurumsal bir anlatımla güncellendi. Amaç, kullanım özellikleri ve menüye geçiş öne çıkarıldı. Öğrenci/geliştirici ve teknoloji bilgileri, React ile oluşturulan erişilebilir açılır “Proje bilgileri” bölümünde korunur. İşlevsiz sayaç kaldırıldı. Mevcut marka renkleriyle telefon ve masaüstü için duyarlı düzen kullanılır. Chrome kontrol bağlantısı kullanılamadığından bu düzenin ekran görüntüsüyle görsel doğrulaması yapılmış sayılmaz.
+
+## Tauri geliştirme kanıtı — 9 Ekim
+
+Blackboard teslim yönergesindeki `bun run tauri dev` ekran görüntüsü için Windows araçları kuruldu. İlk çalıştırmada kilitli Rust crate sürümleri ile JavaScript paketlerinin major/minor sürümleri uyuşmuyordu. JavaScript ve Rust bağımlılıkları Tauri 2.12.x / opener 2.7.x aralıklarına hizalandı ve iki kilit dosyası güncellendi.
+
+`bun run tauri dev` Rust derlemesini tamamladı ve Windows uygulama sürecini başlattı. Ardından web build, tür kontrolü ve 9 iş kuralı testi de başarılı sonuçlandı. Öğrencinin paylaştığı gerçek ekran görüntüsü `docs/kanit/tauri-dev.png` dosyasına değiştirilmeden eklendi. Kaynak değişiklikleri `feature/native-dev-proof` dalında incelenir. Blackboard teslimi öğrenci tarafından ayrıca yapılır.
