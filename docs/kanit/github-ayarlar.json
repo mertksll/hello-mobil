@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-09T23:42:51.182Z",
+  "checkedAt": "2026-10-09T23:48:28.957Z",
   "repository": "mertksll/kampus-coffee",
   "defaultBranch": "master",
   "fork": true,
@@ -87,5 +87,12 @@
     "feature/ajan-renk-uyumu",
     "feature/ajan-siparis-rehberi"
   ],
-  "batch01Target": "e4871639cbd6ef8a5d7a96b94fcd4d7b289583c5"
+  "batch01Target": "e4871639cbd6ef8a5d7a96b94fcd4d7b289583c5",
+  "screenshot": {
+    "path": "docs/kanit/master-korumasi.png",
+    "width": 1584,
+    "height": 4616,
+    "sha256": "2737637e96b41b643c57d1d645845bde46837258637ee4386246f22d23192599",
+    "provenance": "Student-provided original PNG, copied byte-for-byte without edits."
+  }
 }

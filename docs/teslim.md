@@ -18,7 +18,7 @@
 - [x] Aynı değişiklik [PR #16](https://github.com/mertksll/kampus-coffee/pull/16) ile normal merge edildi. Merge commit ve otomatik kaynak dalı silme etkin; PR #16–18'in kaynak dallarının silindiği doğrulandı.
 - [x] Dış katkıcıların bütün PR iş akışları onay gerektirir; workflow varsayılanı salt okumadır. Yetkililer yalnız `mertksll` ve `keyvanarasteh`. [GitHub ayar kaydı](kanit/github-ayarlar.json), [PR güvenliği](kurallar.md#pr-güvenliği).
 - [x] Eğitmenin #14 ve #15 PR'ları zaten birleştirilmişti; [Hafta 4 görevleri](tasks/week-4/) kaynakta bulunur. Görev 10–15 bu düzeltme çalışmasında tamamlandı olarak işaretlenmez.
-- [ ] **Kural seti ekran görüntüsü:** `docs/kanit/master-korumasi.png` henüz yok. Chrome kontrol aracı başlatılamadığı için öğrenciden gerçek görüntü bekleniyor. API kaydı bu görüntünün yerine sunulmaz; Görev 09.1 bu kalem tamamlanana kadar bütünüyle bitmiş sayılmaz.
+- [x] **Kural seti ekran görüntüsü:** Öğrencinin sağladığı 1584 × 4616 px tam sayfa PNG, [master-korumasi.png](kanit/master-korumasi.png) olarak değiştirilmeden eklendi. Repo adı, Active durumu, boş bypass listesi, varsayılan master hedefi ve üç koruma kuralı görünür. Kayıtlı ayarlar API üzerinden yeniden doğrulandı; zorunlu PR onay sayısı 0. Böylece Görev 09.1 için ayar, doğrudan gönderim reddi, PR ile merge, güvenlik belgesi ve görüntü kanıtı tamamlandı.
 
 ## Son doğrulama
 
@@ -38,7 +38,7 @@
 | [#17](https://github.com/mertksll/kampus-coffee/pull/17) | Gerçek renk görevi ve kontrast kanıtı | Normal merge, iki tema ve build başarılı |
 | [#18](https://github.com/mertksll/kampus-coffee/pull/18) | Dört dilde sayfa görevi ve uyum kanıtı | Normal merge, build/check/test başarılı |
 
-Son belge kaydı `feature/degerlendirme-kanitlari` dalı üzerinden PR ile sunulur. [PR listesi](https://github.com/mertksll/kampus-coffee/pulls?q=is%3Apr).
+Son belge kaydı [PR #19](https://github.com/mertksll/kampus-coffee/pull/19) ile birleştirildi. Tam sayfa kural seti görüntüsü ve tamamlanma kaydı `feature/master-korumasi-kaniti` dalından ayrı PR ile sunulur. [PR listesi](https://github.com/mertksll/kampus-coffee/pulls?q=is%3Apr).
 
 ## Batch 01 etiketi ve güncel ZIP
 
@@ -48,7 +48,7 @@ Güncel kaynak için [master sayfasında](https://github.com/mertksll/kampus-cof
 
 ## Öğrencinin tamamlayacağı işlemler
 
-1. [Kural seti ayarlarını](https://github.com/mertksll/kampus-coffee/settings/rules/24822067) gösteren gerçek ekran görüntüsünü sağla; görüntü `docs/kanit/master-korumasi.png` olarak PR ile eklenecek.
-2. Görüntü eklendikten sonra **master'dan yeni ZIP indir**; eski indirme kendiliğinden güncellenmez.
+1. [GitHub master sayfasında](https://github.com/mertksll/kampus-coffee/tree/master) **Code → Download ZIP** ile güncel kaynak ZIP'ini indir; eski indirme kendiliğinden güncellenmez.
+2. ZIP içinde `docs/kanit/master-korumasi.png` ve `docs/ajan-uyum-testleri.md` bulunduğunu kontrol et.
 3. Eğitmenin son bildirimine göre Blackboard'a yalnız ZIP'i yükleyip gönderimi kendin tamamla. İlk teslimin 9 Ekim 23:59 / üç deneme kuralı geçmiş teslim içindi; bu düzeltme için yeni süre veya deneme hakkı bu belgede varsayılmaz.
 4. Blackboard gönderim onayını kontrol et. Ajan Blackboard'a teslim yapmaz veya öğretmene mesaj göndermez.
