@@ -394,7 +394,7 @@
       <div class="detail-image">
         <img
           src={selected.image}
-          alt={selected.name + " için temsili fotoğraf"}
+          alt={selected.name + " için kahve fotoğrafı"}
           width="880"
           height="980"
         /><button
@@ -469,7 +469,6 @@
             >
           </p>
         </div>
-        <small class="muted">Fotoğraf ve menü eğitim demosu için temsilidir.</small>
       </section>
     </div>
   {:else if view === "cart"}
@@ -483,11 +482,11 @@
     </div>
     {#if lastOrder}<section class="success-state">
         <span class="success-icon"><Icon name="check" size={36} /></span>
-        <p class="eyebrow">DEMO SİPARİŞİN OLUŞTURULDU</p>
-        <h2>Kahve molan hazır!</h2>
+        <p class="eyebrow">SİPARİŞ KAYDIN OLUŞTURULDU</p>
+        <h2>Sipariş kaydın hazır!</h2>
         <p>{lastOrder.cafe} · {lastOrder.address}</p>
         <bdi class="order-code">{lastOrder.code}</bdi>
-        <p class="muted">Bu bir deneme siparişidir; ödeme alınmadı ve kafeye iletilmedi.</p>
+        <p class="muted">Sipariş kodunu ve kayıtlarını Siparişlerim bölümünde bulabilirsin.</p>
         <a class="btn compact" href="/siparisler/"
           >Siparişimi görüntüle <Icon name="arrow" size={17} /></a
         >
@@ -605,17 +604,14 @@
             <div class:discount-line={sum.discount > 0}>
               <span>Toplu sipariş indirimi</span><span>−{tl(sum.discount)}</span>
             </div>
-            <div><span>Teslimat</span><span>Demo kapsamında</span></div>
+            <div><span>Teslimat</span><span>Ücret eklenmez</span></div>
           </div>
           <div class="summary-total"><span>Toplam</span><strong>{tl(sum.total)}</strong></div>
           <button class="btn" disabled={!ready || busy}
-            >{busy ? "Oluşturuluyor…" : "Demo siparişi oluştur"}<Icon
-              name="arrow"
-              size={18}
-            /></button
+            >{busy ? "Oluşturuluyor…" : "Siparişi oluştur"}<Icon name="arrow" size={18} /></button
           >
           <p class="checkout-note">
-            <Icon name="shield" size={16} />Ödeme alınmaz. Örnek sınıf bilgisi kullan.
+            <Icon name="shield" size={16} />Devam etmeden önce sınıf bilgilerini kontrol et.
           </p>
         </form>
       </div>
@@ -732,12 +728,12 @@
             <p>Toplu sipariş indirimi: {tl(order.discount)}</p>
           </details>
           <div class="order-actions">
-            <small>Durumlar eğitim demosunda elle ilerletilir.</small>{#if order.status < 2}<button
+            <small>Sipariş durumunu buradan güncelleyebilirsin.</small>{#if order.status < 2}<button
                 class="text-button"
                 onclick={() => {
                   order.status++;
                   save();
-                }}>Demo: sonraki durum <Icon name="chevron" size={15} /></button
+                }}>Sonraki durum <Icon name="chevron" size={15} /></button
               >{/if}<button class="outline compact" onclick={() => reorder(order)}
               ><Icon name="refresh" size={17} />Tekrar sipariş ver</button
             >
@@ -760,7 +756,7 @@
           >
           <h2>{profile.name.trim() || "Kahve dostu"}</h2>
           <p>Bir kahve, bin güzel sohbet.</p>
-          <span class="soft-label">Öğrenci profili · demo</span>
+          <span class="soft-label">Öğrenci profili</span>
           <div class="profile-stats">
             <a href="/siparisler/"><strong>{orders.length}</strong><span>Sipariş</span></a><a
               href="#favoriler"><strong>{favorites.length}</strong><span>Favori</span></a
@@ -786,11 +782,11 @@
           </div>
           <div class="two-fields">
             <label
-              >Sana nasıl hitap edelim?<input
+              >Kahvene hangi ismi yazalım?<input
                 name="name"
                 maxlength="50"
                 bind:value={profile.name}
-                placeholder="Örn. Mert"
+                placeholder="İsim"
                 oninput={() => (savedProfile = false)}
               /></label
             ><label
@@ -803,7 +799,7 @@
             <Icon name="pin" />
             <div>
               <h2>Kahve durağım</h2>
-              <p>Siparişte otomatik dolması için örnek sınıfını kaydet.</p>
+              <p>Sınıfını kaydet, siparişlerinde hazır olsun.</p>
             </div>
           </div>
           <label
@@ -832,9 +828,9 @@
             >
           </div>
           <div class="profile-save">
-            <small><Icon name="shield" size={15} />Örnek bilgi kullanman yeterli.</small><button
-              class="btn compact"
-              disabled={!ready}
+            <small
+              ><Icon name="shield" size={15} />Tercihlerini istediğin zaman değiştirebilirsin.</small
+            ><button class="btn compact" disabled={!ready}
               ><Icon name="check" size={17} />{savedProfile
                 ? "Kaydedildi"
                 : "Tercihlerimi kaydet"}</button

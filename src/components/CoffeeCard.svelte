@@ -21,7 +21,7 @@
     <a href={"/urun/" + product.id + "/"} aria-label={product.name + " seçeneklerini gör"}
       ><img
         src={product.image}
-        alt={product.name + " için temsili kahve fotoğrafı"}
+        alt={product.name + " kahve fotoğrafı"}
         width="640"
         height="480"
         loading="lazy"
