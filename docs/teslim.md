@@ -2,7 +2,7 @@
 
 Öğrenci: Mustafa Mert Köksal · 2620511152 · mertksll. Proje: **Kampus's Coffee**.
 
-Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; dokuz PR ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. Sürüm etiketi ve Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; Blackboard yüklemesini öğrenci yapacak.
+Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; geliştirme PR’ları ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. Bu teslim sürümünün etiketi `v0.1.0-batch-01` olarak belirlenmiştir. Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; yüklemeyi öğrenci yapacak.
 
 ## Dokuz maddelik kontrol matrisi
 
@@ -54,27 +54,23 @@ Her PR için AI görevi ve doğrulama sonucu açıklamada yer alır. Dosya farkl
 
 Dal bazındaki doğrulama özeti: [PR derlemeleri](kanit/pr-builds.txt). Bu doğrulamalar yerel, ayrı kaynak kopyalarında gerçekleştirildi; GitHub CI çalıştırması olarak sunulmaz.
 
-## Kalan sürüm ve teslim adımları
+## Batch 01 sürüm bilgisi
 
-1. Birleştirilmiş `master` üzerinde sürüm etiketini oluştur:
+Bu teslim sürümünün etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/hello-mobil/tree/v0.1.0-batch-01).
+Etiket, PR'larla birleştirilmiş `master` commitini işaret eden açıklamalı Git etiketi olarak kullanılır. Açıklaması: “Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı”.
 
-```bash
-git checkout master
-git pull origin master
-git tag -a v0.1.0-batch-01 -m "Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı"
-git push origin v0.1.0-batch-01
-```
+## Kalan teslim adımları
 
-2. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
-3. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
+1. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
+2. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
 
-Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmez. Tag veya Blackboard teslimi yapılmadan bu adımları tamamlandı olarak değiştirmeyin.
+Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmez. Blackboard teslimi yapılmadan bu adımı tamamlandı olarak değiştirmeyin.
 
 ## Arayüz yenilemesi — 9 Ekim
 
 `feature/coffee-experience` dalında kullanıcı isteğiyle 24 fotoğraflı ürün, üç markanın raster logoları, yeniden tasarlanan sepet/sipariş/profil ekranları eklendi. Yerel profil ve favoriler, sepet sayacı, fiyat sıralaması, tekrar sipariş ve sipariş geçmişini onaylı silme uygulanmıştır. Var olan ürün kimlikleri korunmuştur.
 
-Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub PR aşaması tamamlandı; sürüm etiketi ve Blackboard teslimi beklemektedir.
+Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub PR aşaması tamamlandı; sürüm adı yukarıda kayıtlıdır. Blackboard teslimi beklemektedir.
 
 ## Arayüz metinleri
 
