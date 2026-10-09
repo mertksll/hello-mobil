@@ -16,7 +16,7 @@ Bu kayıt, yerel çalışma kopyasını ve doğrulanabilen sonuçları anlatır.
 | 6 | Markalama ve ikonlar | Yerel kopyada hazır | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
 | 7 | Dört dilde bilgi sayfaları | 16 sayfa derlendi | [Build kaydı](kanit/build.txt), [form etkileşim testi](kanit/dom-test.txt) |
 | 8 | Mimari ağaç | Yerel kopyada hazır | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
-| 9 | Derleme | Başarılı, çıkış kodu 0 | [44 sayfalık build](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt) |
+| 9 | Derleme | Başarılı, çıkış kodu 0; ekran görüntüsü eklendi | [Gerçek terminal ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt) |
 
 ## Doğrulama kapsamı
 
@@ -26,7 +26,8 @@ Bu kayıt, yerel çalışma kopyasını ve doğrulanabilen sonuçları anlatır.
 - `bun run test`: 9 test; tümü geçti.
 - İzole DOM testi: dört dilde form temizleme/bildirim, ağ isteği veya kayıt yapılmaması; sepetin saklanması; farklı kafenin reddi; indirimli onay/kod; durum ilerletme ve geçmiş silme. Bu, gerçek tarayıcı veya cihaz testi değildir.
 - Statik audit: 44 rotanın dil/yönü, MDX stilleri, yerel bağlantılar, CSS-belge token eşleşmesi, kullanılan metin çiftlerinde en az 4.5:1 kontrast, ikon dosyaları ve ölçüleri.
-- Chrome kontrol aracı oturum başlatma hatası verdi. Görsel tarayıcı kontrolü ve öğretmenin istediği gerçek terminal ekran görüntüsü henüz alınamadı. Metin build kaydı, ekran görüntüsü olarak sunulmuyor.
+- Öğrencinin paylaştığı gerçek terminal ekran görüntüsü değiştirilmeden [docs/kanit/build.png](kanit/build.png) olarak eklendi. Görüntüde `bun run build`, 44 sayfa, `Complete!` ve `Exit code: 0` okunuyor. Metin build kaydı, ajanın ayrı derleme çalıştırmasına aittir.
+- Chrome kontrol aracı oturum başlatma hatası verdi; tüm ekranların görsel tarayıcı kontrolü hâlâ doğrulanmadı.
 - Rust/Cargo ve platform geliştirme araçları kurulu olmadığından native uygulama çalıştırması ve APK/IPA/EXE/DMG üretimi doğrulanmadı. Bu ilk aşamada kaynak kod ve ikon setleri hazırlandı.
 
 ## Ajan uyumu kontrolü
@@ -37,10 +38,9 @@ Bu kayıt mevcut ajanın yaptığı doğrulamadır; ayrı bir ajanın değerlend
 
 ## Tamamlanmayı bekleyen GitHub ve teslim adımları
 
-1. Hazır yerel özellik dallarını kendi fork'una gönder; her dal için PR aç. README değişikliği ayrı PR olmalıdır. Files changed incelemesini yap ve build kanıtını kontrol et.
+1. Hazır yerel özellik dallarını ve ekran görüntüsünü içeren `docs/build-proof` dalını kendi fork'una gönder; her dal için PR aç. README değişikliği ayrı PR olmalıdır. Files changed incelemesini yap ve build kanıtını kontrol et.
 2. PR'ları sırayla master'a birleştir; en az bir gerçek merged PR bulunmalı.
-3. Başarılı `bun run build` çıktısının gerçek ekran görüntüsünü `docs/kanit/` altına ekle ve PR ile birleştir.
-4. Birleştirilmiş master üzerinde etiketi oluştur:
+3. Birleştirilmiş master üzerinde etiketi oluştur:
 
 ```bash
 git checkout master
@@ -49,8 +49,8 @@ git tag -a v0.1.0-batch-01 -m "Hafta 3: Batch 01 - Proje altyapısı, markalama 
 git push origin v0.1.0-batch-01
 ```
 
-5. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
-6. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
+4. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
+5. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
 
 Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmemiştir. PR, tag veya Blackboard teslimi yapılmadan bu satırları tamamlandı olarak değiştirmeyin.
 
