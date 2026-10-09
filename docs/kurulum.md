@@ -10,7 +10,7 @@ Native: [Tauri önkoşulları](https://v2.tauri.app/start/prerequisites/), Rust 
 
 ```bash
 git clone https://github.com/mertksll/kampus-coffee.git
-cd hello-mobil
+cd kampus-coffee
 bun install
 bun run dev
 ```
