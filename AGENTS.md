@@ -14,6 +14,7 @@ Kullanıcıya ait kaynak: https://github.com/mertksll/kampus-coffee.
 | [Kurulum](docs/kurulum.md) | Önkoşullar ve komutlar |
 | [Kurallar](docs/kurallar.md) | İş kuralları ve PR güvenliği |
 | [Kaynaklar](docs/kaynaklar.md) | Resmi kaynaklar |
+| [Ajan uyum testleri](docs/ajan-uyum-testleri.md) | Gerçek renk ve sayfa görevleri, kurallar ve doğrulama kanıtı |
 | [Teslim](docs/teslim.md) | Kontrol listesi ve kalan işler |
 | [Hafta 4 görevleri](docs/tasks/week-4/) | Öğretim görevlisinin Batch 02 yönergeleri |
 | [Hafta 3 görevleri](docs/tasks/week-3/) | Öğretim görevlisinin özgün yönergeleri |

@@ -13,7 +13,7 @@ Kontrast açık / koyu sırasıyla, WCAG sRGB formülüyle hesaplanmıştır. De
 | `--zemin` | `#f7f7f2` | `#161d19` | Sayfa zemini | 11.81:1 / 15.60:1 (--yazi) |
 | `--kart` | `#ffffff` | `#212b24` | Kart ve form yüzeyi | 12.69:1 / 13.30:1 (--yazi) |
 | `--yazi` | `#23372c` | `#f3f5ed` | Ana metin | 12.69:1 / 13.30:1 (--kart) |
-| `--yazi-soluk` | `#58665d` | `#b8c5b9` | Yardımcı metin | 6.05:1 / 8.17:1 (--kart) |
+| `--yazi-soluk` | `#526157` | `#c1cec2` | Yardımcı metin | 6.55:1 / 8.97:1 (--kart) |
 | `--kenar` | `#dfe5dc` | `#3c4a3f` | Dekoratif sınır | 9.90:1 / 8.51:1 (--yazi); dekoratif çift |
 | `--vurgu` | `#eaf0e5` | `#2d3d30` | Yumuşak vurgu | 10.94:1 / 10.48:1 (--yazi) |
 | `--logo-zemin` | `#ffffff` | `#ffffff` | Sabit beyaz marka zemini | 12.69:1 / 1.10:1 (--yazi); dekoratif çift |
