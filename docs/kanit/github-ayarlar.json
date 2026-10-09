@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-09T23:42:51.182Z",
+  "repository": "mertksll/kampus-coffee",
+  "defaultBranch": "master",
+  "fork": true,
+  "parent": "keyvanarasteh/hello-mobil",
+  "allowMergeCommit": true,
+  "deleteBranchOnMerge": true,
+  "ruleset": {
+    "id": 24822067,
+    "name": "master koruması",
+    "enforcement": "active",
+    "target": "branch",
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "bypassActors": [],
+    "currentUserCanBypass": "never",
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": false,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      }
+    ]
+  },
+  "externalWorkflows": {
+    "approval_policy": "all_external_contributors"
+  },
+  "workflowPermissions": {
+    "default_workflow_permissions": "read",
+    "can_approve_pull_request_reviews": false
+  },
+  "collaborators": [
+    {
+      "login": "keyvanarasteh",
+      "role": "write"
+    },
+    {
+      "login": "mertksll",
+      "role": "admin"
+    }
+  ],
+  "openPRs": [],
+  "mergedTaskPRs": [
+    {
+      "number": 16,
+      "url": "https://github.com/mertksll/kampus-coffee/pull/16",
+      "mergeCommit": "5407445c649b08f48ad82c2661355726ec48be3e"
+    },
+    {
+      "number": 17,
+      "url": "https://github.com/mertksll/kampus-coffee/pull/17",
+      "mergeCommit": "c241796d315bfb324cdecccb6fd9e2c89ecbbfd9"
+    },
+    {
+      "number": 18,
+      "url": "https://github.com/mertksll/kampus-coffee/pull/18",
+      "mergeCommit": "3d7bf3f5aa6a24faf78f732832313fb48dde908b"
+    }
+  ],
+  "deletedHeadBranches": [
+    "feature/master-korumasi",
+    "feature/ajan-renk-uyumu",
+    "feature/ajan-siparis-rehberi"
+  ],
+  "batch01Target": "e4871639cbd6ef8a5d7a96b94fcd4d7b289583c5"
+}

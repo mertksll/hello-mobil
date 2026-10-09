@@ -1,67 +1,54 @@
-# 9 Ekim 2026 — Batch 01 teslim kontrolü
+# Teslim ve değerlendirme düzeltmeleri — 10 Ekim 2026
 
-Öğrenci: Mustafa Mert Köksal · 2620511152 · mertksll. Proje: **Kampus's Coffee**.
+Öğrenci: **Mustafa Mert Köksal · 2620511152 · mertksll**. Proje: **Kampus's Coffee**. Güncel depo: [mertksll/kampus-coffee](https://github.com/mertksll/kampus-coffee), `keyvanarasteh/hello-mobil` fork'udur.
 
-Kaynak uygulama ve kanıtlar bu depodadır. Batch 01 etiketi `v0.1.0-batch-01`, 9 Ekim'de doğrulanmış `e4871639cbd6ef8a5d7a96b94fcd4d7b289583c5` commitini gösterir. Aşağıdaki kayıt o tarihin kapsamını anlatır; 10 Ekim düzeltmeleri ayrı PR'larla ilerler ve bu etiket korunur. Blackboard'a 9 Ekim ZIP yüklemesini öğrenci yapar; bu belge gönderim yapıldığını iddia etmez.
+## Eğitmenin geri bildirimi
 
-## Dokuz maddelik kontrol matrisi
+Öğrencinin paylaştığı Batch 01 değerlendirmesi **105/108**: eski doğrudan master commit'i için −1, ayrı ajan uyum testi kaydı bulunmadığı için −2. Diğer kalemler tam puandır. Aşağıdaki düzeltmeler yeniden puanlama sonucu değildir; notu eğitmen belirler.
 
-- [x] **Fork ve işbirliği:** [mertksll/kampus-coffee](https://github.com/mertksll/kampus-coffee), `keyvanarasteh/hello-mobil` fork'udur. 9 Ekim GitHub kontrolünde eğitmenin işbirlikçi erişimi doğrulandı.
-- [x] **7 Ekim bildirimi:** Öğrenci GitHub kullanıcı adı, fork bağlantısı ve proje fikrini gönderdiğini bildirdi. Bu madde öğrenci beyanına dayanır; 9 Ekim ZIP teslimi ayrıdır.
-- [x] **Proje fikri:** [Amaç, üç temel ekran, hedef kitle ve kod formatı](proje-fikri.md) mevcut.
-- [x] **README:** [Akademik bilgiler, rozetler, içindekiler, kurulum ve lisans](../README.md) mevcut; ayrı [README PR'ı](https://github.com/mertksll/kampus-coffee/pull/4) birleştirildi.
-- [x] **Ajan dosyaları:** [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) mevcut; yönlendirmeler ve belge indeksi doğrulandı.
-- [x] **Markalama:** [Renk token'ları ve beş platformun ikonları](branding.md), [statik doğrulama](kanit/static-audit.txt) ile kontrol edildi.
-- [x] **Bilgi sayfaları:** TR/EN/AR/FA dillerinde 16 sayfa derlendi; AR/FA `dir="rtl"`. [İletişim formu testi](kanit/dom-test.txt) mevcut.
-- [x] **Mimari:** [Klasör yapısı](klasor-mimarisi.md), [rota/platform/ekran matrisi](mimari-agac.md) ve [CSS sınır denetimi](kanit/responsive-audit.txt) mevcut.
-- [x] **Derleme:** [Web build ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt), [Tauri ekran görüntüsü](kanit/tauri-dev.png) ve [Tauri çalıştırma kaydı](kanit/tauri-dev.txt) mevcut.
+[Eski doğrudan commit f3ba476](https://github.com/mertksll/kampus-coffee/commit/f3ba476d134a9c81d17649587d9363991f23b7fa) proje fikri belgesini değiştirmiştir. Geçmiş gizlenmedi veya yeniden yazılmadı; yeni koruma bu eski işlemi geçmişe dönük düzeltmez.
 
-## Doğrulanan kapsam
+## Tamamlanan düzeltmeler
 
-- Node.js 22.23.3 ve Bun 1.4.2; `bun run build` 44 sayfa ve çıkış 0, `bun run check` 0 hata / 0 uyarı, `bun run test` 9 test / 25 doğrulama başarılı.
-- Windows x64: Rust/Cargo 1.99.0, MSVC 14.44 ve Windows SDK 10.0.26100.0. `bun run tauri dev` derlendi ve `target/debug/hello-mobil.exe` açıldı. Öğrencinin gönderdiği iki gerçek ekran görüntüsü değiştirilmeden korunur.
-- Tauri JavaScript ve Rust bağımlılıkları 2.12.x; opener bağımlılıkları 2.7.x aralığında eşleştirildi. Bun frozen lock ve Cargo locked metadata kontrolleri başarılı.
-- Statik denetim 44 rotanın dil/yön bilgilerini, yerel dosya bağlantılarını, CSS–marka token eşleşmesini, kullanılan metin çiftlerinde en az 4.5:1 kontrastı ve platform ikonlarını kontrol eder.
-- DOM testi; dört dilde iletişim formunun bildirim ve temizlemesini, dışarı veri göndermemesini, sepet/favori/profil işlemlerini, toplu indirim ve sipariş geçmişini kapsar. Gerçek tarayıcı veya cihaz testi olarak sunulmaz.
-- CSS denetimi 375–1920 px arasındaki 13 genişlikte kahve sütunlarını, üst/alt gezinmeyi ve maksimum genişlikleri kontrol eder. Mimari belgesi bu kurallarla eşleştirilmiştir.
-- Chrome görsel kontrol aracı oturum başlatma hatası verdi. Windows Tauri ana ekranının öğrenci görüntüsü mevcut; bütün sayfaların farklı genişliklerde görsel testi tamamlanmış değildir. Android/iOS ve MSI/DMG gibi dağıtım paketleri üretilmedi.
+- [x] Depo `kampus-coffee` olarak yeniden adlandırıldı; fork ilişkisi, işbirlikçi erişimi, proje bağlantıları ve kurulum komutları korundu/güncellendi.
+- [x] Bir renk ve bir sayfa görevi ayrı dallarda uygulanıp PR ile birleştirildi. Görev istemleri, okunan kurallar, değişiklikler, gerçek ölçümler ve PR bağlantıları [ajan uyum testlerinde](ajan-uyum-testleri.md).
+- [x] Yeni belge AGENTS indeksinde; bütün yerel belge bağlantıları ve CLAUDE/GEMINI yönlendirmeleri doğrulandı.
+- [x] `master koruması` etkin, hedef varsayılan dal, bypass listesi boş. PR zorunlu; force push ve dal silme engelli.
+- [x] Gerçek Git gönderiminde `refs/heads/master` hedefi GH013 ile reddedildi ve master değişmedi. Test, görev dalındaki commit'i doğrudan master hedefine gönderdi; yerel master'a commit atılmadı. [Gerçek ret çıktısı](kanit/master-korumasi.txt).
+- [x] Aynı değişiklik [PR #16](https://github.com/mertksll/kampus-coffee/pull/16) ile normal merge edildi. Merge commit ve otomatik kaynak dalı silme etkin; PR #16–18'in kaynak dallarının silindiği doğrulandı.
+- [x] Dış katkıcıların bütün PR iş akışları onay gerektirir; workflow varsayılanı salt okumadır. Yetkililer yalnız `mertksll` ve `keyvanarasteh`. [GitHub ayar kaydı](kanit/github-ayarlar.json), [PR güvenliği](kurallar.md#pr-güvenliği).
+- [x] Eğitmenin #14 ve #15 PR'ları zaten birleştirilmişti; [Hafta 4 görevleri](tasks/week-4/) kaynakta bulunur. Görev 10–15 bu düzeltme çalışmasında tamamlandı olarak işaretlenmez.
+- [ ] **Kural seti ekran görüntüsü:** `docs/kanit/master-korumasi.png` henüz yok. Chrome kontrol aracı başlatılamadığı için öğrenciden gerçek görüntü bekleniyor. API kaydı bu görüntünün yerine sunulmaz; Görev 09.1 bu kalem tamamlanana kadar bütünüyle bitmiş sayılmaz.
 
-## Git ve PR kayıtları
+## Son doğrulama
 
-| PR | Kapsam | Doğrulama |
+- `bun run build`: **48 statik sayfa**, çıkış 0. [Build çıktısı](kanit/build.txt).
+- `bun run check`: Astro ve Svelte **0 hata / 0 uyarı**. [Tür kontrolü](kanit/check.txt).
+- `bun run test`: **9 test / 25 doğrulama**, 0 başarısız. [Test çıktısı](kanit/test.txt).
+- [Statik denetim](kanit/static-audit.txt): rota/dil/yön bilgileri, yerel bağlantılar, belge indeksi, marka–CSS eşleşmesi, metin kontrastı ve beş platform ikonları başarılı.
+- [Sayfa denetimi](kanit/ajan-sayfa.txt): rehberin dört çevirisi, AR/FA RTL, karşılıklı dil bağlantıları ve 48 sayfanın alt menüsünden erişim başarılı.
+- [JSDOM bileşen testi](kanit/dom-test.txt): 24 kahve, kafe filtresi, sepet, indirim, profil, sipariş geçmişi ve dört dilde form akışı başarılı. Bunlar gerçek tarayıcı görsel testleri değildir.
+- Önceki Windows Tauri çalıştırması ve öğrencinin verdiği görüntüler korunur: [Tauri görüntüsü](kanit/tauri-dev.png), [Tauri kaydı](kanit/tauri-dev.txt), [9 Ekim web build görüntüsü](kanit/build.png). Bu görüntüler 10 Ekim değişikliklerinin yeni native testi olarak sunulmaz. Android/iOS ve dağıtım paketleri henüz doğrulanmadı.
+
+## Düzeltme PR'ları
+
+| PR | Görev | Sonuç |
 |---|---|---|
-| [#1](https://github.com/mertksll/kampus-coffee/pull/1) | Ajan kuralları ve belge indeksi | Ayrı kopyada build, çıkış 0 |
-| [#2](https://github.com/mertksll/kampus-coffee/pull/2) | Kahve uygulaması ve markalama | Ayrı kopyada build, çıkış 0 |
-| [#3](https://github.com/mertksll/kampus-coffee/pull/3) | Dört dilde bilgi sayfaları | Ayrı kopyada build, çıkış 0 |
-| [#4](https://github.com/mertksll/kampus-coffee/pull/4) | README ve mimari belgeler | Ayrı kopyada build, çıkış 0 |
-| [#5](https://github.com/mertksll/kampus-coffee/pull/5) | Fotoğraflı menü, sepet, sipariş ve profil | Ayrı kopyada build, çıkış 0 |
-| [#6](https://github.com/mertksll/kampus-coffee/pull/6) | Profil ve arayüz metinleri | Ayrı kopyada build, çıkış 0 |
-| [#7](https://github.com/mertksll/kampus-coffee/pull/7) | Hakkında sayfası | Ayrı kopyada build, çıkış 0 |
-| [#8](https://github.com/mertksll/kampus-coffee/pull/8) | Üniversite dersi bildirimi | Ayrı kopyada build, çıkış 0 |
-| [#9](https://github.com/mertksll/kampus-coffee/pull/9) | Gerçek web build görüntüsü | Ayrı kopyada build, çıkış 0 |
-| [#10](https://github.com/mertksll/kampus-coffee/pull/10) | GitHub teslim durumunun kaydı | Build, çıkış 0 |
-| [#11](https://github.com/mertksll/kampus-coffee/pull/11) | Batch 01 sürüm bilgisi | Build, çıkış 0 |
-| [#12](https://github.com/mertksll/kampus-coffee/pull/12) | Tauri sürüm uyumu ve gerçek çalıştırma kanıtı | Windows Tauri dev, build/check/test başarılı |
+| [#16](https://github.com/mertksll/kampus-coffee/pull/16) | Repo adı, master koruması, güvenlik politikası ve doğrudan push testi | Normal merge, build başarılı |
+| [#17](https://github.com/mertksll/kampus-coffee/pull/17) | Gerçek renk görevi ve kontrast kanıtı | Normal merge, iki tema ve build başarılı |
+| [#18](https://github.com/mertksll/kampus-coffee/pull/18) | Dört dilde sayfa görevi ve uyum kanıtı | Normal merge, build/check/test başarılı |
 
-Bu PR'lar normal merge yöntemiyle birleştirildi. Açıklamalarında AI görevi ve doğrulama kapsamı bulunur. İlk dokuz PR için ayrıntılı kayıt [PR derlemeleri](kanit/pr-builds.txt) dosyasındadır. Son belge ve rubrik düzeltmeleri `fix/final-rubric-review` dalı üzerinden PR ile sunulur; [GitHub PR listesinde](https://github.com/mertksll/kampus-coffee/pulls) izlenebilir. Bu kayıtlar yerel doğrulamalardır, GitHub CI iddiası değildir.
+Son belge kaydı `feature/degerlendirme-kanitlari` dalı üzerinden PR ile sunulur. [PR listesi](https://github.com/mertksll/kampus-coffee/pulls?q=is%3Apr).
 
-**Eski Git kaydı:** [f3ba476](https://github.com/mertksll/kampus-coffee/commit/f3ba476d134a9c81d17649587d9363991f23b7fa) proje fikri güncellemesinin GitHub'da ilişkili PR kaydı yoktur; başlığı Conventional Commit biçiminde değildir. Sonraki PR'lar bu eski işlemi geçmişe dönük değiştirmez. Kayıt korunmuştur. Görev 03 belgesi `docs/readme-patch` örneğini verirken Blackboard özeti `feature/*` veya `fix/*` ister; yeni düzeltmeler `fix/*` üzerinden yürütülür.
+## Batch 01 etiketi ve güncel ZIP
 
-## Ajan uyumu kontrolü
+Değerlendirilmiş [`v0.1.0-batch-01`](https://github.com/mertksll/kampus-coffee/tree/v0.1.0-batch-01) etiketi, **`e4871639cbd6ef8a5d7a96b94fcd4d7b289583c5`** commitinde korunur. O teslimin [tarihsel kontrol kaydı](https://github.com/mertksll/kampus-coffee/blob/v0.1.0-batch-01/docs/teslim.md) ve 161 dosyalık ZIP'leri bu sürüme aittir. Yeni düzeltmeler master'ı ilerletir; eski etiketten indirilen ZIP yeni ajan testlerini içermez.
 
-Renk görevi sırasında iki CSS teması ve marka belgesi birlikte güncellendi; token ve kontrast eşleşmesi kontrol edildi. Sayfa görevi sırasında dört dilde iletişim sayfası, ortak navigasyon ve mimari ağaç birlikte düzenlendi. CLAUDE/GEMINI yalnızca AGENTS'e yönlendirir; tüm `docs/*.md` bağlantıları indekste bulunur. Bunlar mevcut ajanın doğrulamalarıdır; ayrı bir ajan değerlendirmesi iddia edilmez.
+Güncel kaynak için [master sayfasında](https://github.com/mertksll/kampus-coffee/tree/master) **Code → Download ZIP** kullanılır. ZIP kaynak koddur; APK/EXE kurulum paketi değildir. İndirilen arşiv kendi kaynak commiti ve dosya içerikleriyle karşılaştırılmalıdır.
 
-Hakkında sayfasında React ile üretilen açılır “Proje bilgileri” bölümü geliştirici ve teknik bilgileri korur. Kullanım Koşulları'nın dört dilinde İstinye Üniversitesi MYO063 kapsamı açıklanır. Siparişler cihazda saklanır; gerçek ödeme, kurye veya marka entegrasyonu bulunmaz.
+## Öğrencinin tamamlayacağı işlemler
 
-## Etiket ve final ZIP
-
-Final etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/kampus-coffee/tree/v0.1.0-batch-01). Açıklama: “Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı”. 9 Ekim final kontrolünde etiketin hedefi ve o günkü master eşleşti; indirilen ZIP bu commit ile dosya bazında karşılaştırıldı. Sonraki hafta görevleri ve değerlendirme düzeltmeleri master'ı ilerletir; eski etiketi güncellemez.
-
-Önceden indirilmiş arşivler otomatik güncellenmez. Tauri kanıtı ve son belge düzeltmeleri için final kontrolden sonra yeniden indirme gerekir.
-
-## Öğrencinin tamamlayacağı teslim
-
-1. [GitHub master sayfasında](https://github.com/mertksll/kampus-coffee/tree/master) **Code → Download ZIP** ile final arşivi indir.
-2. ZIP'te `docs/kanit/build.png` ve `docs/kanit/tauri-dev.png` dosyalarını kontrol et. Yönergeler `docs/tasks/week-3/` içinde bulunur.
-3. Blackboard'a yalnızca final ZIP'i yükle ve gönderimi kendin tamamla. Son tarih 9 Ekim 23:59, en fazla 3 deneme.
-4. Blackboard gönderim onayını kontrol et. Bu işlem yapılmadan ZIP teslimi tamamlandı olarak işaretlenmez.
+1. [Kural seti ayarlarını](https://github.com/mertksll/kampus-coffee/settings/rules/24822067) gösteren gerçek ekran görüntüsünü sağla; görüntü `docs/kanit/master-korumasi.png` olarak PR ile eklenecek.
+2. Görüntü eklendikten sonra **master'dan yeni ZIP indir**; eski indirme kendiliğinden güncellenmez.
+3. Eğitmenin son bildirimine göre Blackboard'a yalnız ZIP'i yükleyip gönderimi kendin tamamla. İlk teslimin 9 Ekim 23:59 / üç deneme kuralı geçmiş teslim içindi; bu düzeltme için yeni süre veya deneme hakkı bu belgede varsayılmaz.
+4. Blackboard gönderim onayını kontrol et. Ajan Blackboard'a teslim yapmaz veya öğretmene mesaj göndermez.

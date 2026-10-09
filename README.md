@@ -53,7 +53,7 @@ Ders arasında sırada bekleyen öğrenciler için kafe ve kahve seçimini, sın
 - Demo takip kodu, aktif/tamamlanan sipariş filtresi, durum adımları ve tekrar sipariş.
 - Cihazda saklanan isim, kafe ve sınıf tercihleri; profil istatistikleri ve kontrollü geçmiş silme.
 - Açık / koyu tema, farklı ekranlara uyumlu görünüm.
-- TR / EN / AR / FA bilgi sayfaları, sağdan sola dil desteği ve demo iletişim formu.
+- TR / EN / AR / FA bilgi sayfaları ve sipariş rehberi, sağdan sola dil desteği ve demo iletişim formu.
 
 Kafe adları örnektir; ortaklık veya gerçek entegrasyon yoktur. Ödeme, gerçek kurye ve sunucu hesabı bu aşamanın kapsamı dışındadır. Web demosunda kod tarayıcıda; Tauri sürümünde `siparis_olustur` Rust komutuyla üretilir. Windows x64 üzerinde `bun run tauri dev` derlemesi ve uygulama sürecinin başlatılması doğrulandı; [çalıştırma kaydı](docs/kanit/tauri-dev.txt). Android/iOS ve dağıtım paketleri henüz doğrulanmadı. Ayrıntılar: [proje fikri](docs/proje-fikri.md), [iş kuralları](docs/kurallar.md), [teslim durumu](docs/teslim.md).
 
@@ -94,7 +94,7 @@ Derleme çıktısı `dist/` dizinidir. Platform çıktıları ve hedefleri [mima
 <a id="belgeler"></a>
 ## Belgeler ve görevler
 
-[Proje fikri](docs/proje-fikri.md) · [Klasör mimarisi](docs/klasor-mimarisi.md) · [Sayfa ve platform mimarisi](docs/mimari-agac.md) · [Marka kılavuzu](docs/branding.md) · [Kurulum](docs/kurulum.md) · [Kurallar](docs/kurallar.md) · [Kaynaklar](docs/kaynaklar.md) · [Teslim kontrolü](docs/teslim.md) · [Hafta 3 görevleri](docs/tasks/week-3/) · [Ajan kuralları](AGENTS.md)
+[Proje fikri](docs/proje-fikri.md) · [Klasör mimarisi](docs/klasor-mimarisi.md) · [Sayfa ve platform mimarisi](docs/mimari-agac.md) · [Marka kılavuzu](docs/branding.md) · [Kurulum](docs/kurulum.md) · [Kurallar](docs/kurallar.md) · [Kaynaklar](docs/kaynaklar.md) · [Ajan uyum testleri](docs/ajan-uyum-testleri.md) · [Teslim kontrolü](docs/teslim.md) · [Hafta 3 görevleri](docs/tasks/week-3/) · [Hafta 4 görevleri](docs/tasks/week-4/) · [Ajan kuralları](AGENTS.md)
 
 <a id="lisans"></a>
 ## Lisans

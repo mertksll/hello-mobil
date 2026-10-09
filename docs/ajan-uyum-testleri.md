@@ -44,4 +44,10 @@ Bu kayıt, eğitmenin Görev 08 geri bildiriminden sonra öğrencinin onayladı�
 - `bun run test`: **9 test / 25 doğrulama başarılı**; [komut çıktısı](kanit/test.txt).
 - [Derlenmiş HTML denetimi](kanit/ajan-sayfa.txt): dört dilde başlık, beş içerik bölümü, AR/FA RTL, dört karşılıklı dil bağlantısı, koşullar bağlantısı ve 48 sayfanın alt menüsünden erişim doğrulandı.
 - [Statik denetim](kanit/static-audit.txt): tüm yerel bağlantılar, belge indeksi, renk tablosu ve ikonlar başarılı. [Bileşen testinde](kanit/dom-test.txt) mevcut sepet, profil, sipariş ve dört dilde iletişim akışı da geçti.
-- Bunlar derleme, statik HTML ve JSDOM kontrolleridir. Chrome aracı başlatılamadığı için gerçek tarayıcı görsel kontrolü yapılmadı. PR birleştirme sonucu son kayda eklenecektir.
+- Bunlar derleme, statik HTML ve JSDOM kontrolleridir. Chrome aracı başlatılamadığı için gerçek tarayıcı görsel kontrolü yapılmadı. [PR #18](https://github.com/mertksll/kampus-coffee/pull/18) normal merge ile birleştirildi; merge commiti `3d7bf3f5aa6a24faf78f732832313fb48dde908b`.
+
+## Sonuç ve sınır
+
+İki görev de ayrı `feature/*` dalında, Conventional Commit başlığı ve AI görevini açıklayan PR ile tamamlandı. Dosya farkları incelendi ve yerel build başarılı olduktan sonra normal merge yapıldı. [GitHub doğrulama kaydı](kanit/github-ayarlar.json), iki PR'ın merge commitlerini ve kaynak dallarının otomatik silindiğini gösterir.
+
+Renk ve klasör/sayfa ağaçları bu belgede çoğaltılmadı; kendi kaynaklarına bağlantı verildi. Bütün `docs/*.md` belgeleri AGENTS indeksinde, CLAUDE/GEMINI dosyaları yalnız AGENTS'e yönlendirmedir. Bu çalışma eksik ajan uyum kaydını tamamlar; puan değişikliği kararını eğitmen verir.

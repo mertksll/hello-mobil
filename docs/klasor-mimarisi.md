@@ -3,7 +3,7 @@
 Bu belge dizin ağacının tek kaynağıdır; tek tek bileşen dosyaları listelenmez.
 
 ```text
-hello-mobil/
+kampus-coffee/
 ├── package.json        # Bağımlılıklar, sürüm ve geliştirme komutları
 ├── bun.lock            # Sabitlenmiş bağımlılık çözümü
 ├── astro.config.mjs    # Static çıktı, React/Svelte/MDX, 127.0.0.1:1420
