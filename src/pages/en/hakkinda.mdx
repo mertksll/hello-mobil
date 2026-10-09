@@ -1,20 +1,41 @@
 ---
 layout: ../../layouts/Layout.astro
-title: "About | Kampus's Coffee"
+title: "About us | Kampus's Coffee"
 lang: en
 ---
 
-import CanliRozet from '../../components/react/CanliRozet';
+import ProjeBilgileri from '../../components/react/ProjeBilgileri';
 
-<article className="info-page">
-<h1>About</h1>
-<h2>Bringing your coffee break to class</h2>
-<p>Kampus's Coffee began with a simple problem: waiting in a café queue between lessons. Students choose coffee from one café, customize it and group orders for the same classroom. Keep your coffee choices and preferences together in one place.</p>
-<h2>Developer</h2>
-<p>Mustafa Mert Köksal · 2620511152 · Information Security Technology · Istinye University Vocational School. MYO063 Mobile Programming; instructor Keyvan Arasteh Abbasabad.</p>
-<h2>Technologies</h2>
-<p>Tauri v2 and Rust: native application layer; Astro: static pages; Svelte 5: interactive interface; React: the counter below; MDX: information pages; Bun: dependencies and builds.</p>
-<h2>Coffee choices</h2>
-<p>Explore Starbucks, Kahve Dünyası and Espressolab coffee choices, customize size and milk, and save favorites for your next break.</p>
-<CanliRozet client:load etiket="Coffee break counter" />
+<article className="info-page about-page">
+  <header className="about-intro">
+    <div className="about-intro-copy">
+      <p className="about-eyebrow">KAMPUS'S COFFEE · About us</p>
+      <h1>A coffee experience built around campus life.</h1>
+      <p className="about-lead">Kampus's Coffee is a coffee ordering application developed to help students manage coffee preferences, group orders and classroom details in one place.</p>
+    </div>
+    <img className="about-photo" src="/coffee/hero.webp" alt="Latte in a green cup on a wooden table" width="1600" height="2400" />
+  </header>
+  <section className="about-story" aria-labelledby="about-story-title">
+    <h2 id="about-story-title">An idea inspired by short breaks</h2>
+    <p>Between classes, study sessions and social life, time for a coffee break matters. Kampus's Coffee began with the idea of making better use of that time. Our aim is to simplify choosing coffee and preparing an order, with an experience that fits campus life.</p>
+  </section>
+  <section className="about-values" aria-labelledby="about-values-title">
+    <h2 id="about-values-title">Designed around your everyday needs</h2>
+    <div className="about-value-grid">
+      <section className="about-value"><span className="about-value-number" aria-hidden="true">01</span><h3>Personal preferences</h3><p>Choose your coffee size and milk option. Save favorites to find your preferred choices easily.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">02</span><h3>Ordering together</h3><p>A 10% group discount is calculated on orders of five or more coffees from the same café for the same classroom.</p></section>
+<section className="about-value"><span className="about-value-number" aria-hidden="true">03</span><h3>Simple planning</h3><p>Save classroom details in your profile and manage your cart, order records and coffee preferences in one place.</p></section>
+    </div>
+  </section>
+  <div className="about-invitation">
+    <h2>Plan your next coffee break.</h2>
+    <a className="btn" href="/">Explore coffees</a>
+  </div>
+  <ProjeBilgileri
+    title="Project information"
+    description="Developer and technology"
+    facts={[["Developer", "Mustafa Mert Köksal"], ["Student number", "2620511152"], ["Department", "Information Security Technology"], ["University", "Istinye University Vocational School"], ["Course", "MYO063 · Mobile Programming"], ["Instructor", "Keyvan Arasteh Abbasabad"]]}
+    technologyTitle="Technology"
+    technologyDescription="Tauri v2 and Rust provide the application layer; Astro and MDX structure the pages; Svelte 5 and React power the interactive interface. Bun handles dependencies and builds."
+  />
 </article>

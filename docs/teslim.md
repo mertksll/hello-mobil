@@ -63,3 +63,7 @@ Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak iş
 ## Arayüz metinleri
 
 Kullanıcı isteğiyle görünür demo/eğitim etiketleri sadeleştirildi. Profil alanı “Kahvene hangi ismi yazalım?” ve “İsim” olarak güncellendi. Bu değişiklik backend entegrasyonu eklemez; sipariş kayıtları cihazda kalır, iletişim formu içerik göndermez. Mevcut çalışma şekli koşullar/gizlilik ve geliştirme belgelerinde açıklanır. Öğretmenin prototip ibaresi beklentisinden bu arayüz tercihiyle ayrılındı; akademik künye Hakkında ve README içinde korunur.
+
+## Hakkında sayfası
+
+Hakkında içeriği dört dilde kurumsal bir anlatımla güncellendi. Amaç, kullanım özellikleri ve menüye geçiş öne çıkarıldı. Öğrenci/geliştirici ve teknoloji bilgileri, React ile oluşturulan erişilebilir açılır “Proje bilgileri” bölümünde korunur. İşlevsiz sayaç kaldırıldı. Mevcut marka renkleriyle telefon ve masaüstü için duyarlı düzen kullanılır. Chrome kontrol bağlantısı kullanılamadığından bu düzenin ekran görüntüsüyle görsel doğrulaması yapılmış sayılmaz.
