@@ -2,86 +2,66 @@
 
 Öğrenci: Mustafa Mert Köksal · 2620511152 · mertksll. Proje: **Kampus's Coffee**.
 
-Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; geliştirme PR’ları ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. İlk Batch 01 sürümünün etiketi `v0.1.0-batch-01` olarak korunur; ek Tauri kanıtını içeren teslim kaynağı güncel `master` dalıdır. Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; yüklemeyi öğrenci yapacak.
+Kaynak uygulama ve kanıtlar bu depodadır. Final sürüm etiketi `v0.1.0-batch-01`, son PR'lar birleştirildikten sonra doğrulanan `master` commitine eşitlenir. Blackboard'a 9 Ekim ZIP yüklemesini öğrenci yapar; bu belge gönderim yapıldığını iddia etmez.
 
 ## Dokuz maddelik kontrol matrisi
 
-| No | Alan | Durum | Kanıt |
-|---|---|---|---|
-| 1 | Fork ve davet | Fork ve eğitmen erişimi doğrulandı | [Fork](https://github.com/mertksll/hello-mobil); kaynak commit f3ba476. 9 Ekim GitHub kontrolünde keyvanarasteh işbirlikçi erişimi doğrulandı. |
-| 2 | 7 Ekim Blackboard bildirimi | Öğrenci beyanıyla tamamlandı | Öğrenci sohbette gönderdiğini bildirdi; 7 Ekim bildiriminin gönderildiği öğrenci beyanına dayanır; 9 Ekim ZIP teslimi ayrıdır. |
-| 3 | Proje fikri | Hazır | [Amaç ve ekranlar](proje-fikri.md) |
-| 4 | README | GitHub ana dalında | [README](../README.md); README için ayrı [PR #4](https://github.com/mertksll/hello-mobil/pull/4) birleştirildi. |
-| 5 | Ajan dosyaları | GitHub ana dalında | [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) |
-| 6 | Markalama ve ikonlar | GitHub ana dalında | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
-| 7 | Dört dilde bilgi sayfaları | 16 sayfa derlendi | [Build kaydı](kanit/build.txt), [form etkileşim testi](kanit/dom-test.txt) |
-| 8 | Mimari ağaç | GitHub ana dalında | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
-| 9 | Derleme | Web build çıkış 0; Windows Tauri dev derlendi ve açıldı | [Gerçek terminal ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt), [Tauri ekran görüntüsü](kanit/tauri-dev.png), [Tauri kaydı](kanit/tauri-dev.txt) |
+- [x] **Fork ve işbirliği:** [mertksll/hello-mobil](https://github.com/mertksll/hello-mobil), `keyvanarasteh/hello-mobil` fork'udur. 9 Ekim GitHub kontrolünde eğitmenin işbirlikçi erişimi doğrulandı.
+- [x] **7 Ekim bildirimi:** Öğrenci GitHub kullanıcı adı, fork bağlantısı ve proje fikrini gönderdiğini bildirdi. Bu madde öğrenci beyanına dayanır; 9 Ekim ZIP teslimi ayrıdır.
+- [x] **Proje fikri:** [Amaç, üç temel ekran, hedef kitle ve kod formatı](proje-fikri.md) mevcut.
+- [x] **README:** [Akademik bilgiler, rozetler, içindekiler, kurulum ve lisans](../README.md) mevcut; ayrı [README PR'ı](https://github.com/mertksll/hello-mobil/pull/4) birleştirildi.
+- [x] **Ajan dosyaları:** [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) mevcut; yönlendirmeler ve belge indeksi doğrulandı.
+- [x] **Markalama:** [Renk token'ları ve beş platformun ikonları](branding.md), [statik doğrulama](kanit/static-audit.txt) ile kontrol edildi.
+- [x] **Bilgi sayfaları:** TR/EN/AR/FA dillerinde 16 sayfa derlendi; AR/FA `dir="rtl"`. [İletişim formu testi](kanit/dom-test.txt) mevcut.
+- [x] **Mimari:** [Klasör yapısı](klasor-mimarisi.md), [rota/platform/ekran matrisi](mimari-agac.md) ve [CSS sınır denetimi](kanit/responsive-audit.txt) mevcut.
+- [x] **Derleme:** [Web build ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt), [Tauri ekran görüntüsü](kanit/tauri-dev.png) ve [Tauri çalıştırma kaydı](kanit/tauri-dev.txt) mevcut.
 
-## Doğrulama kapsamı
+## Doğrulanan kapsam
 
-- Node.js 22.23.3, Bun 1.4.2. Kilitli bağımlılık kurulumu başarılı.
-- `bun run build`: 44 statik sayfa; exit 0.
-- `bun run check`: Astro ve Svelte; 0 hata, 0 uyarı.
-- `bun run test`: 9 test; tümü geçti.
-- İzole DOM testi: dört dilde form temizleme/bildirim, ağ isteği veya kayıt yapılmaması; sepetin saklanması; farklı kafenin reddi; indirimli onay/kod; durum ilerletme ve geçmiş silme. Bu, gerçek tarayıcı veya cihaz testi değildir.
-- Statik audit: 44 rotanın dil/yönü, MDX stilleri, yerel bağlantılar, CSS-belge token eşleşmesi, kullanılan metin çiftlerinde en az 4.5:1 kontrast, ikon dosyaları ve ölçüleri.
-- Öğrencinin paylaştığı gerçek terminal ekran görüntüsü değiştirilmeden [docs/kanit/build.png](kanit/build.png) olarak eklendi. Görüntüde `bun run build`, 44 sayfa, `Complete!` ve `Exit code: 0` okunuyor. Metin build kaydı, ajanın ayrı derleme çalıştırmasına aittir.
-- Chrome kontrol aracı oturum başlatma hatası verdi; tüm ekranların görsel tarayıcı kontrolü hâlâ doğrulanmadı.
-- Windows x64 üzerinde `bun run tauri dev` başarıyla derlendi; `target/debug/hello-mobil.exe` süreci ve “Kampus's Coffee” pencere başlığı doğrulandı. [Tauri çalıştırma kaydı](kanit/tauri-dev.txt). Öğrencinin paylaştığı [gerçek Tauri ekran görüntüsü](kanit/tauri-dev.png) değiştirilmeden eklendi; görüntüde derleme sonucu, çalıştırılan EXE ve açılan arayüz görülüyor; Android/iOS ve MSI/DMG gibi dağıtım paketleri üretilmedi.
+- Node.js 22.23.3 ve Bun 1.4.2; `bun run build` 44 sayfa ve çıkış 0, `bun run check` 0 hata / 0 uyarı, `bun run test` 9 test / 25 doğrulama başarılı.
+- Windows x64: Rust/Cargo 1.99.0, MSVC 14.44 ve Windows SDK 10.0.26100.0. `bun run tauri dev` derlendi ve `target/debug/hello-mobil.exe` açıldı. Öğrencinin gönderdiği iki gerçek ekran görüntüsü değiştirilmeden korunur.
+- Tauri JavaScript ve Rust bağımlılıkları 2.12.x; opener bağımlılıkları 2.7.x aralığında eşleştirildi. Bun frozen lock ve Cargo locked metadata kontrolleri başarılı.
+- Statik denetim 44 rotanın dil/yön bilgilerini, yerel dosya bağlantılarını, CSS–marka token eşleşmesini, kullanılan metin çiftlerinde en az 4.5:1 kontrastı ve platform ikonlarını kontrol eder.
+- DOM testi; dört dilde iletişim formunun bildirim ve temizlemesini, dışarı veri göndermemesini, sepet/favori/profil işlemlerini, toplu indirim ve sipariş geçmişini kapsar. Gerçek tarayıcı veya cihaz testi olarak sunulmaz.
+- CSS denetimi 375–1920 px arasındaki 13 genişlikte kahve sütunlarını, üst/alt gezinmeyi ve maksimum genişlikleri kontrol eder. Mimari belgesi bu kurallarla eşleştirilmiştir.
+- Chrome görsel kontrol aracı oturum başlatma hatası verdi. Windows Tauri ana ekranının öğrenci görüntüsü mevcut; bütün sayfaların farklı genişliklerde görsel testi tamamlanmış değildir. Android/iOS ve MSI/DMG gibi dağıtım paketleri üretilmedi.
+
+## Git ve PR kayıtları
+
+| PR | Kapsam | Doğrulama |
+|---|---|---|
+| [#1](https://github.com/mertksll/hello-mobil/pull/1) | Ajan kuralları ve belge indeksi | Ayrı kopyada build, çıkış 0 |
+| [#2](https://github.com/mertksll/hello-mobil/pull/2) | Kahve uygulaması ve markalama | Ayrı kopyada build, çıkış 0 |
+| [#3](https://github.com/mertksll/hello-mobil/pull/3) | Dört dilde bilgi sayfaları | Ayrı kopyada build, çıkış 0 |
+| [#4](https://github.com/mertksll/hello-mobil/pull/4) | README ve mimari belgeler | Ayrı kopyada build, çıkış 0 |
+| [#5](https://github.com/mertksll/hello-mobil/pull/5) | Fotoğraflı menü, sepet, sipariş ve profil | Ayrı kopyada build, çıkış 0 |
+| [#6](https://github.com/mertksll/hello-mobil/pull/6) | Profil ve arayüz metinleri | Ayrı kopyada build, çıkış 0 |
+| [#7](https://github.com/mertksll/hello-mobil/pull/7) | Hakkında sayfası | Ayrı kopyada build, çıkış 0 |
+| [#8](https://github.com/mertksll/hello-mobil/pull/8) | Üniversite dersi bildirimi | Ayrı kopyada build, çıkış 0 |
+| [#9](https://github.com/mertksll/hello-mobil/pull/9) | Gerçek web build görüntüsü | Ayrı kopyada build, çıkış 0 |
+| [#10](https://github.com/mertksll/hello-mobil/pull/10) | GitHub teslim durumunun kaydı | Build, çıkış 0 |
+| [#11](https://github.com/mertksll/hello-mobil/pull/11) | Batch 01 sürüm bilgisi | Build, çıkış 0 |
+| [#12](https://github.com/mertksll/hello-mobil/pull/12) | Tauri sürüm uyumu ve gerçek çalıştırma kanıtı | Windows Tauri dev, build/check/test başarılı |
+
+Bu PR'lar normal merge yöntemiyle birleştirildi. Açıklamalarında AI görevi ve doğrulama kapsamı bulunur. İlk dokuz PR için ayrıntılı kayıt [PR derlemeleri](kanit/pr-builds.txt) dosyasındadır. Son belge ve rubrik düzeltmeleri `fix/final-rubric-review` dalı üzerinden PR ile sunulur; [GitHub PR listesinde](https://github.com/mertksll/hello-mobil/pulls) izlenebilir. Bu kayıtlar yerel doğrulamalardır, GitHub CI iddiası değildir.
+
+**Eski Git kaydı:** [f3ba476](https://github.com/mertksll/hello-mobil/commit/f3ba476d134a9c81d17649587d9363991f23b7fa) proje fikri güncellemesinin GitHub'da ilişkili PR kaydı yoktur; başlığı Conventional Commit biçiminde değildir. Sonraki PR'lar bu eski işlemi geçmişe dönük değiştirmez. Kayıt korunmuştur. Görev 03 belgesi `docs/readme-patch` örneğini verirken Blackboard özeti `feature/*` veya `fix/*` ister; yeni düzeltmeler `fix/*` üzerinden yürütülür.
 
 ## Ajan uyumu kontrolü
 
-Renk görevi: kahve paleti iki CSS temasıyla birlikte marka belgesine işlendi; statik audit token eşleşmesini ve kontrastı doğruladı.
-Sayfa görevi: iletişim sayfası dört dilde oluşturuldu; ortak navigasyona ve mimari ağaç belgesine eklendi. Formdaki demo gönderim/reset izole DOM testinde doğrulandı. CLAUDE/GEMINI yalnızca AGENTS yönlendirmesi içerir; docs/*.md bağlantıları kontrol edildi.
-Bu kayıt mevcut ajanın yaptığı doğrulamadır; ayrı bir ajanın değerlendirmesi olduğu iddia edilmez.
+Renk görevi sırasında iki CSS teması ve marka belgesi birlikte güncellendi; token ve kontrast eşleşmesi kontrol edildi. Sayfa görevi sırasında dört dilde iletişim sayfası, ortak navigasyon ve mimari ağaç birlikte düzenlendi. CLAUDE/GEMINI yalnızca AGENTS'e yönlendirir; tüm `docs/*.md` bağlantıları indekste bulunur. Bunlar mevcut ajanın doğrulamalarıdır; ayrı bir ajan değerlendirmesi iddia edilmez.
 
-## GitHub PR kayıtları
+Hakkında sayfasında React ile üretilen açılır “Proje bilgileri” bölümü geliştirici ve teknik bilgileri korur. Kullanım Koşulları'nın dört dilinde İstinye Üniversitesi MYO063 kapsamı açıklanır. Siparişler cihazda saklanır; gerçek ödeme, kurye veya marka entegrasyonu bulunmaz.
 
-Her PR için AI görevi ve doğrulama sonucu açıklamada yer alır. Dosya farkları incelendi; bağımlı dallarda önceki PR'ların değişiklikleri güncel ana dalla ayrıca karşılaştırıldı. Birleştirme normal merge yöntemiyle yapıldı; koruma veya kontrol atlatılmadı.
+## Etiket ve final ZIP
 
-| PR | Dal | Ayrı kopyadaki build | Durum |
-|---|---|---|---|
-| [#1](https://github.com/mertksll/hello-mobil/pull/1) | `feature/agent-rules` | 11 sayfa, çıkış 0 | Birleştirildi |
-| [#2](https://github.com/mertksll/hello-mobil/pull/2) | `feature/kampus-coffee-branding` | 11 sayfa, çıkış 0 | Birleştirildi |
-| [#3](https://github.com/mertksll/hello-mobil/pull/3) | `feature/info-pages` | 26 sayfa, çıkış 0 | Birleştirildi |
-| [#4](https://github.com/mertksll/hello-mobil/pull/4) | `docs/readme-patch` | 26 sayfa, çıkış 0 | Birleştirildi |
-| [#5](https://github.com/mertksll/hello-mobil/pull/5) | `feature/coffee-experience` | 44 sayfa, çıkış 0 | Birleştirildi |
-| [#6](https://github.com/mertksll/hello-mobil/pull/6) | `fix/interface-copy` | 44 sayfa, çıkış 0 | Birleştirildi |
-| [#7](https://github.com/mertksll/hello-mobil/pull/7) | `fix/about-page` | 44 sayfa, çıkış 0 | Birleştirildi |
-| [#8](https://github.com/mertksll/hello-mobil/pull/8) | `fix/terms-course-notice` | 44 sayfa, çıkış 0 | Birleştirildi |
-| [#9](https://github.com/mertksll/hello-mobil/pull/9) | `docs/build-proof` | 44 sayfa, çıkış 0 | Birleştirildi |
+Final etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/hello-mobil/tree/v0.1.0-batch-01). Açıklama: “Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı”. Final kontrolde açıklamalı etiketin hedefi ile doğrulanmış `master` commitinin aynı olduğu ve ZIP içeriğinin bu commit ile eşleştiği denetlenir.
 
-Dal bazındaki doğrulama özeti: [PR derlemeleri](kanit/pr-builds.txt). Bu doğrulamalar yerel, ayrı kaynak kopyalarında gerçekleştirildi; GitHub CI çalıştırması olarak sunulmaz.
+Önceden indirilmiş arşivler otomatik güncellenmez. Tauri kanıtı ve son belge düzeltmeleri için final kontrolden sonra yeniden indirme gerekir.
 
-## Batch 01 sürüm bilgisi
+## Öğrencinin tamamlayacağı teslim
 
-İlk Batch 01 sürümünün etiketi: [`v0.1.0-batch-01`](https://github.com/mertksll/hello-mobil/tree/v0.1.0-batch-01).
-Etiket, PR'larla birleştirilmiş `master` commitini işaret eden açıklamalı Git etiketi olarak kullanılır. Açıklaması: “Hafta 3: Batch 01 - Proje altyapısı, markalama ve sayfalar tamamlandı”.
-
-## Kalan teslim adımları
-
-1. GitHub'da **master → Code → Download ZIP** ile güncel kaynak arşivini indir. Önceden indirilen `v0.1.0-batch-01` arşivi bu ek Tauri kanıtını içermez.
-2. Öğrenci Blackboard'a yalnızca güncel ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
-
-Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmez. Blackboard teslimi yapılmadan bu adımı tamamlandı olarak değiştirmeyin.
-
-## Arayüz yenilemesi — 9 Ekim
-
-`feature/coffee-experience` dalında kullanıcı isteğiyle 24 fotoğraflı ürün, üç markanın raster logoları, yeniden tasarlanan sepet/sipariş/profil ekranları eklendi. Yerel profil ve favoriler, sepet sayacı, fiyat sıralaması, tekrar sipariş ve sipariş geçmişini onaylı silme uygulanmıştır. Var olan ürün kimlikleri korunmuştur.
-
-Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub PR aşaması tamamlandı; sürüm adı yukarıda kayıtlıdır. Blackboard teslimi beklemektedir.
-
-## Arayüz metinleri
-
-Kullanıcı isteğiyle görünür demo/eğitim etiketleri sadeleştirildi. Profil alanı “Kahvene hangi ismi yazalım?” ve “İsim” olarak güncellendi. Bu değişiklik backend entegrasyonu eklemez; sipariş kayıtları cihazda kalır, iletişim formu içerik göndermez. Mevcut çalışma şekli koşullar/gizlilik ve geliştirme belgelerinde açıklanır. Kullanıcının onayıyla Kullanım Koşulları’nın dört diline uygulamanın İstinye Üniversitesi MYO063 Mobil Programlama dersi kapsamında geliştirildiği bildirimi eklendi. Böylece Görev 06 kapsamındaki üniversite projesi açıklaması karşılandı; akademik künye Hakkında ve README içinde de korunur.
-
-## Hakkında sayfası
-
-Hakkında içeriği dört dilde kurumsal bir anlatımla güncellendi. Amaç, kullanım özellikleri ve menüye geçiş öne çıkarıldı. Öğrenci/geliştirici ve teknoloji bilgileri, React ile oluşturulan erişilebilir açılır “Proje bilgileri” bölümünde korunur. İşlevsiz sayaç kaldırıldı. Mevcut marka renkleriyle telefon ve masaüstü için duyarlı düzen kullanılır. Chrome kontrol bağlantısı kullanılamadığından bu düzenin ekran görüntüsüyle görsel doğrulaması yapılmış sayılmaz.
-
-## Tauri geliştirme kanıtı — 9 Ekim
-
-Blackboard teslim yönergesindeki `bun run tauri dev` ekran görüntüsü için Windows araçları kuruldu. İlk çalıştırmada kilitli Rust crate sürümleri ile JavaScript paketlerinin major/minor sürümleri uyuşmuyordu. JavaScript ve Rust bağımlılıkları Tauri 2.12.x / opener 2.7.x aralıklarına hizalandı ve iki kilit dosyası güncellendi.
-
-`bun run tauri dev` Rust derlemesini tamamladı ve Windows uygulama sürecini başlattı. Ardından web build, tür kontrolü ve 9 iş kuralı testi de başarılı sonuçlandı. Öğrencinin paylaştığı gerçek ekran görüntüsü `docs/kanit/tauri-dev.png` dosyasına değiştirilmeden eklendi. Kaynak değişiklikleri `feature/native-dev-proof` dalında incelenir. Blackboard teslimi öğrenci tarafından ayrıca yapılır.
+1. [GitHub master sayfasında](https://github.com/mertksll/hello-mobil/tree/master) **Code → Download ZIP** ile final arşivi indir.
+2. ZIP'te `docs/kanit/build.png` ve `docs/kanit/tauri-dev.png` dosyalarını kontrol et. Yönergeler `docs/tasks/week-3/` içinde bulunur.
+3. Blackboard'a yalnızca final ZIP'i yükle ve gönderimi kendin tamamla. Son tarih 9 Ekim 23:59, en fazla 3 deneme.
+4. Blackboard gönderim onayını kontrol et. Bu işlem yapılmadan ZIP teslimi tamamlandı olarak işaretlenmez.

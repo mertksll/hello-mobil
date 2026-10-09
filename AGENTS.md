@@ -31,11 +31,13 @@ Renk değiştirirken branding tablosu ve iki CSS temasını eşleştir, kontrast
 Yeni sayfayı navigasyona, mimari-ağaç belgesine ve gerekiyorsa dil bağlantılarına ekle.
 
 ## Git ve doğrulama
-master/main üzerine doğrudan commit atma. Her özellik için feature/<ad>, hata için fix/<ad>, belgeler için docs/<ad> dalı aç.
+master/main üzerine doğrudan commit atma. Yeni görevlerde feature/<ad> veya fix/<ad> dalı aç; belge düzeltmelerini de bu dallar üzerinden sun.
 feat:, fix:, docs: gibi Conventional Commit başlıkları kullan.
-Her özellik dalını GitHub PR ile sun; açıklamada yapılan değişiklik ve AI görevini 2–3 cümlede belirt.
+Her görev dalını GitHub PR ile sun; açıklamada yapılan değişiklik ve AI görevini 2–3 cümlede belirt.
 Files changed incelemesi ve başarılı build sonrası PR birleştir; en az bir merged PR gereklidir.
 Komutlar: bun install; bun run dev; bun run build; bun run check; bun run test; bun run tauri dev.
 İkonlar: bun run tauri icon assets/app-icon.png.
 Derleme kanıtını docs/kanit/ altında tut. Native test yapılamadıysa açıkça yaz.
 Blackboard'a teslimi öğrenci yapar; ajan teslim etmez ve öğretmene mesaj göndermez.
+
+Teslim etiketi, tüm PR’lar birleştirildikten sonra son doğrulanmış master commitini göstermelidir. Etiket ve ZIP içeriğini karşılaştır. Git geçmişindeki eski PR’siz işlemleri gizleme veya yeniden yazma; teslim kaydında kapsamını açıkça belirt.
