@@ -1,4 +1,4 @@
-Date: 2026-10-09T03:36:09+03:00
+Date: 2026-10-10T02:41:19+03:00
 Command: bun run test
 Exit code: 0
 
@@ -6,17 +6,17 @@ $ bun test
 bun test v1.4.2 (744846f84)
 
 tests\coffee.test.ts:
-(pass) Sipariş iş kuralları > 4 kahvede indirim yok, 5 kahvede %10 indirim var [7.17ms]
-(pass) Sipariş iş kuralları > Büyük boy ve alternatif süt tutara dahil edilir [0.04ms]
+(pass) Sipariş iş kuralları > 4 kahvede indirim yok, 5 kahvede %10 indirim var [6.52ms]
+(pass) Sipariş iş kuralları > Büyük boy ve alternatif süt tutara dahil edilir [0.05ms]
 (pass) Sipariş iş kuralları > İndirim aynı kafedeki farklı ürünlerin toplam adedine uygulanır [0.02ms]
-(pass) Sipariş iş kuralları > Başka kafeden ürün içeren kayıt reddedilir [13.08ms]
-(pass) Sipariş iş kuralları > Bozuk, negatif veya kesirli adet ve bilinmeyen seçenek reddedilir [0.45ms]
-(pass) Sipariş iş kuralları > Geçerli kayıt kabul edilir; bozuk sipariş kodu ve durum reddedilir [22.18ms]
-(pass) Yeni ekleme mevcut sepeti değiştirmeden birleştirir; adet taşması geri alınır [5.95ms]
-(pass) Profil yalnızca tanımlı kafe ve sınırlı metin alanları kabul eder [2.37ms]
-(pass) Katalogda 24 benzersiz ürün ve her kafede 8 seçenek var [4.63ms]
+(pass) Sipariş iş kuralları > Başka kafeden ürün içeren kayıt reddedilir [1.51ms]
+(pass) Sipariş iş kuralları > Bozuk, negatif veya kesirli adet ve bilinmeyen seçenek reddedilir [0.23ms]
+(pass) Sipariş iş kuralları > Geçerli kayıt kabul edilir; bozuk sipariş kodu ve durum reddedilir [4.19ms]
+(pass) Yeni ekleme mevcut sepeti değiştirmeden birleştirir; adet taşması geri alınır [2.29ms]
+(pass) Profil yalnızca tanımlı kafe ve sınırlı metin alanları kabul eder [0.50ms]
+(pass) Katalogda 24 benzersiz ürün ve her kafede 8 seçenek var [0.76ms]
 
  9 pass
  0 fail
  25 expect() calls
-Ran 9 tests across 1 file. [424.00ms]
+Ran 9 tests across 1 file. [89.00ms]

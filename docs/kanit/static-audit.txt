@@ -1,5 +1,5 @@
 Static artifact audit (not a visual browser test)
-PASS 44 HTML routes: lang, dir, info-page styling, links and assets checked
+PASS 48 HTML routes: lang, dir, info-page styling, links and assets checked
 PASS README / AGENTS / docs local links checked
 PASS Agent index and forwarding files checked
 PASS Both CSS palettes match documentation; used text pairs pass WCAG 4.5:1
