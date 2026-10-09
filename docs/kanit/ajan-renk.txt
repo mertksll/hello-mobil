@@ -1,0 +1,15 @@
+Date: 2026-10-10T02:39:45+03:00
+Color task: --yazi-soluk; actual CSS values read from both themes.
+Formula: WCAG sRGB relative luminance; (Lmax+0.05)/(Lmin+0.05); minimum normal text 4.5:1.
+PASS light: --yazi-soluk / --kart: 6.5497:1
+PASS light: --yazi-soluk / --zemin: 6.0947:1
+PASS light: --yazi-soluk / --vurgu: 5.6433:1
+PASS light: --yazi-soluk / --hero-zemin: 5.6273:1
+PASS dark: --yazi-soluk / --kart: 8.9678:1
+PASS dark: --yazi-soluk / --zemin: 10.5197:1
+PASS dark: --yazi-soluk / --vurgu: 7.0674:1
+PASS dark: --yazi-soluk / --hero-zemin: 8.0883:1
+PASS all source color tokens equal branding table (static-audit.txt).
+PASS all docs/*.md indexed in AGENTS.md (static-audit.txt).
+PASS bun run build: 44 pages, exit 0.
+Scope: static contrast and artifact checks, not a visual browser/device test.
