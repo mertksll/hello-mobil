@@ -45,13 +45,19 @@ Beş platform için ikon kaynakları bulunur; ikon üretimi native paketlerin ol
 
 ## Duyarlı ve uyarlanabilir düzen
 
-| Ekran | CSS aralığı | Düzen / gezinme |
-|---|---|---|
-| Telefon | <768 px (özellikle 375–430) | Tek sütun; üst başlık ve sabit alt menü; fotoğraflı hero ve yatay kaydırılan kafe seçimi |
-| Tablet | 768–1199 px (özellikle 768–1024) | İki sütun; ürün/sepet detayında iki panel; sabit alt menü |
-| Masaüstü | 1200–1599 px | Üç sütun; ortalanmış max-width 1200 px; üst başlığa yerleşen gezinme |
-| Büyük ekran | ≥1600 px | Dört sütun; max-width 1440 px; menü öğeleri en fazla 220 px |
+Bu tablo ana kahve listesindeki `.coffee-grid`, `.app-page` ve `.app-nav` kurallarını açıklar. Eşikler `src/styles/app.css` ile eşleştirilmiştir.
 
-RTL düzeninde mantıksal CSS özellikleri kullanılır. Formlar klavye ile kullanılabilir; focus görünür, safe-area ve reduced-motion desteklenir. Gerçek cihaz test durumu [teslim belgesinde](teslim.md).
+| Ekran | CSS aralığı | Kahve listesi ve yerleşim | Gezinme |
+|---|---|---|---|
+| Dar telefon | <480 px (özellikle 375–430) | Tek sütun; tek panelli hero; yatay kaydırılan kafe seçimi | Sabit alt menü |
+| Geniş telefon | 480–767 px | İki sütun; hero ve detay ekranı tek panel | Sabit alt menü |
+| Tablet | 768–1023 px | İki sütun; ürün/sepet detayında iki panel | Sabit alt menü |
+| Geniş tablet / küçük masaüstü | 1024–1199 px | İki sütun; ürün/sepet detayında iki panel | Üst başlık içinde menü |
+| Masaüstü | 1200–1599 px | Üç sütun; ortalanmış `max-width: 1240px` | Üst başlık içinde menü |
+| Büyük ekran | ≥1600 px | Dört sütun; ortalanmış `max-width: 1440px` | Üst başlık içinde menü |
 
-480–767 px ara genişlikte kahve listesi 2 sütuna geçer. Mobil ve tablette (<1024 px) alt gezinme sabit; masaüstünde (≥1024 px) üst menü kullanılır. Profil tercihleri sonraki sepetin teslimat alanlarını doldurur.
+`.app-page` için temel üst genişlik sınırı 1240 px, 1600 px ve üzerindeki ekranlarda 1440 px'dir. Küçük ekranlarda kullanılabilir genişliğe sığar; telefon iç boşluğu 18 px, tablet iç boşluğu 24 px, masaüstü iç boşluğu 32 px, büyük ekran iç boşluğu 40 px'dir. Kartlar `minmax(0, 1fr)` sütunları kullanır.
+
+Gezinme değişimi **1024 px**, kahve listesinin üç sütuna geçişi **1200 px** sınırındadır. Profil tercihleri sonraki sepetin teslimat alanlarını doldurur. RTL sayfalarında dil ve yön özellikleri bulunur; odak göstergesi, safe-area ve reduced-motion kuralları tanımlıdır.
+
+375–1920 px arasındaki 13 genişlikte grid, gezinme ve maksimum genişlik kuralları [statik CSS denetiminde](kanit/responsive-audit.txt) doğrulandı. Bu denetim görsel taşma veya gerçek cihaz testi değildir. Windows uygulamasının gerçek görüntüsü [Tauri kanıtında](kanit/tauri-dev.png); diğer ekran boyutlarının görsel doğrulama sınırı [teslim belgesinde](teslim.md) açıklanır.

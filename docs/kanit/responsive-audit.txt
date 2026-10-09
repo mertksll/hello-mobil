@@ -1,0 +1,20 @@
+Static responsive CSS audit - 2026-10-09
+Source: src/styles/app.css; parsed with PostCSS.
+This verifies matching CSS declarations, not browser rendering or visual overflow.
+Viewport(px) | Coffee columns | Navigation | app-page max-width
+375 | 1 | fixed bottom | 1240px
+430 | 1 | fixed bottom | 1240px
+479 | 1 | fixed bottom | 1240px
+480 | 2 | fixed bottom | 1240px
+767 | 2 | fixed bottom | 1240px
+768 | 2 | fixed bottom | 1240px
+1023 | 2 | fixed bottom | 1240px
+1024 | 2 | header flow | 1240px
+1199 | 2 | header flow | 1240px
+1200 | 3 | header flow | 1240px
+1599 | 3 | header flow | 1240px
+1600 | 4 | header flow | 1440px
+1920 | 4 | header flow | 1440px
+PASS responsive boundary declarations.
+Known visual evidence: student-provided Windows Tauri screenshot (tauri-dev.png).
+Other viewport screenshots are not available: Chrome automation could not initialize.
