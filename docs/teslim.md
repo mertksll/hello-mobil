@@ -16,16 +16,16 @@ Bu kayıt, yerel çalışma kopyasını ve doğrulanabilen sonuçları anlatır.
 | 6 | Markalama ve ikonlar | Yerel kopyada hazır | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
 | 7 | Dört dilde bilgi sayfaları | 16 sayfa derlendi | [Build kaydı](kanit/build.txt), [form etkileşim testi](kanit/dom-test.txt) |
 | 8 | Mimari ağaç | Yerel kopyada hazır | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
-| 9 | Derleme | Başarılı, çıkış kodu 0 | [26 sayfalık build](kanit/build.txt), [tür kontrolü](kanit/check.txt), [6 iş kuralı testi](kanit/test.txt) |
+| 9 | Derleme | Başarılı, çıkış kodu 0 | [44 sayfalık build](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt) |
 
 ## Doğrulama kapsamı
 
 - Node.js 22.23.3, Bun 1.4.2. Kilitli bağımlılık kurulumu başarılı.
-- `bun run build`: 26 statik sayfa; exit 0.
+- `bun run build`: 44 statik sayfa; exit 0.
 - `bun run check`: Astro ve Svelte; 0 hata, 0 uyarı.
-- `bun run test`: 6 test, 14 assertion; tümü geçti.
+- `bun run test`: 9 test; tümü geçti.
 - İzole DOM testi: dört dilde form temizleme/bildirim, ağ isteği veya kayıt yapılmaması; sepetin saklanması; farklı kafenin reddi; indirimli onay/kod; durum ilerletme ve geçmiş silme. Bu, gerçek tarayıcı veya cihaz testi değildir.
-- Statik audit: 26 rotanın dil/yönü, MDX stilleri, yerel bağlantılar, CSS-belge token eşleşmesi, kullanılan metin çiftlerinde en az 4.5:1 kontrast, ikon dosyaları ve ölçüleri.
+- Statik audit: 44 rotanın dil/yönü, MDX stilleri, yerel bağlantılar, CSS-belge token eşleşmesi, kullanılan metin çiftlerinde en az 4.5:1 kontrast, ikon dosyaları ve ölçüleri.
 - Chrome kontrol aracı oturum başlatma hatası verdi. Görsel tarayıcı kontrolü ve öğretmenin istediği gerçek terminal ekran görüntüsü henüz alınamadı. Metin build kaydı, ekran görüntüsü olarak sunulmuyor.
 - Rust/Cargo ve platform geliştirme araçları kurulu olmadığından native uygulama çalıştırması ve APK/IPA/EXE/DMG üretimi doğrulanmadı. Bu ilk aşamada kaynak kod ve ikon setleri hazırlandı.
 
@@ -53,3 +53,9 @@ git push origin v0.1.0-batch-01
 6. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
 
 Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmemiştir. PR, tag veya Blackboard teslimi yapılmadan bu satırları tamamlandı olarak değiştirmeyin.
+
+## Arayüz yenilemesi — 9 Ekim
+
+`feature/coffee-experience` dalında kullanıcı isteğiyle 24 fotoğraflı ürün, üç markanın raster logoları, yeniden tasarlanan sepet/sipariş/profil ekranları eklendi. Yerel profil ve favoriler, sepet sayacı, fiyat sıralaması, tekrar sipariş ve sipariş geçmişini onaylı silme uygulanmıştır. Var olan ürün kimlikleri korunmuştur.
+
+Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub ve Blackboard adımları hâlâ beklemektedir.

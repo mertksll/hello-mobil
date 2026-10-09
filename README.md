@@ -47,10 +47,11 @@
 
 Ders arasında sırada bekleyen öğrenciler için kafe ve kahve seçimini, sınıfa teslimat fikriyle birleştirir. Bu sürümde:
 
-- Örnek kafe menüsü, ürün arama ve sıcak / soğuk filtreleri.
-- Boyut, süt ve adet seçimi; tek kafeli sepet ve tutar hesabı.
+- Üç kafe, 24 fotoğraflı kahve; marka logoları, arama, sıcak/soğuk filtresi ve fiyat sıralaması.
+- Boyut, süt ve adet seçimi; hızlı ekleme, favoriler, tek kafeli sepet ve adet düzenleme.
 - Aynı sınıfa 5 ve üzeri kahvede %10 demo indirim.
-- Demo sipariş kodu ve cihazda sipariş geçmişi; durumlar kullanıcı tarafından ilerletilir.
+- Demo takip kodu, aktif/tamamlanan sipariş filtresi, durum adımları ve tekrar sipariş.
+- Cihazda saklanan isim, kafe ve sınıf tercihleri; profil istatistikleri ve kontrollü geçmiş silme.
 - Açık / koyu tema, farklı ekranlara uyumlu görünüm.
 - TR / EN / AR / FA bilgi sayfaları, sağdan sola dil desteği ve demo iletişim formu.
 
