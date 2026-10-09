@@ -62,7 +62,7 @@ Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak iş
 
 ## Arayüz metinleri
 
-Kullanıcı isteğiyle görünür demo/eğitim etiketleri sadeleştirildi. Profil alanı “Kahvene hangi ismi yazalım?” ve “İsim” olarak güncellendi. Bu değişiklik backend entegrasyonu eklemez; sipariş kayıtları cihazda kalır, iletişim formu içerik göndermez. Mevcut çalışma şekli koşullar/gizlilik ve geliştirme belgelerinde açıklanır. Öğretmenin prototip ibaresi beklentisinden bu arayüz tercihiyle ayrılındı; akademik künye Hakkında ve README içinde korunur.
+Kullanıcı isteğiyle görünür demo/eğitim etiketleri sadeleştirildi. Profil alanı “Kahvene hangi ismi yazalım?” ve “İsim” olarak güncellendi. Bu değişiklik backend entegrasyonu eklemez; sipariş kayıtları cihazda kalır, iletişim formu içerik göndermez. Mevcut çalışma şekli koşullar/gizlilik ve geliştirme belgelerinde açıklanır. Kullanıcının onayıyla Kullanım Koşulları’nın dört diline uygulamanın İstinye Üniversitesi MYO063 Mobil Programlama dersi kapsamında geliştirildiği bildirimi eklendi. Böylece Görev 06 kapsamındaki üniversite projesi açıklaması karşılandı; akademik künye Hakkında ve README içinde de korunur.
 
 ## Hakkında sayfası
 
