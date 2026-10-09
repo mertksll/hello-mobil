@@ -1,0 +1,50 @@
+GitHub PR branches: local build verification
+Each exact commit was exported to a separate validation directory.
+Build command: bun run build
+Dependencies: existing installed project dependencies; Node.js 22.23.3 / Bun 1.4.2
+This is a local verification summary, not a GitHub CI run.
+
+Branch: feature/agent-rules
+Commit: 233da2edfc53d63428054dc54a3eef70bfd199f0
+Exit code: 0
+Static pages: 11
+
+Branch: feature/kampus-coffee-branding
+Commit: 98211925cd2b52cc8043192ec63e1f082b0a23ac
+Exit code: 0
+Static pages: 11
+
+Branch: feature/info-pages
+Commit: 2981e53658ffc870f407100711b1a00ad06a1183
+Exit code: 0
+Static pages: 26
+
+Branch: docs/readme-patch
+Commit: e7cab396cae9832184e02a94963fca81a12c3649
+Exit code: 0
+Static pages: 26
+
+Branch: feature/coffee-experience
+Commit: fdd84a0d8f7c2566276fd28ed705641d6c5413ee
+Exit code: 0
+Static pages: 44
+
+Branch: fix/interface-copy
+Commit: def979ebc28d0338c121f6774afb1dcc88bef8ef
+Exit code: 0
+Static pages: 44
+
+Branch: fix/about-page
+Commit: b2295be390ae07415e64299c7bdca2a96a0c02b0
+Exit code: 0
+Static pages: 44
+
+Branch: fix/terms-course-notice
+Commit: 2fbf0e187fb192d9d44887e075bcb560fe4ef558
+Exit code: 0
+Static pages: 44
+
+Branch: docs/build-proof
+Commit: 43912acf3c65ecb5a8022c538098473761a753e4
+Exit code: 0
+Static pages: 44

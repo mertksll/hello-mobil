@@ -2,7 +2,7 @@
 
 Öğrenci: Mustafa Mert Köksal · 2620511152 · mertksll. Proje: **Kampus's Coffee**.
 
-Bu kayıt, yerel çalışma kopyasını ve doğrulanabilen sonuçları anlatır. GitHub'a gönderim, PR birleştirme ve sürüm etiketi henüz yapılmadı. Blackboard'a 9 Ekim ZIP teslimi de yapılmadı; öğrenci kendisi yükleyecek.
+Uygulama, belgeler ve derleme ekran görüntüsü GitHub'a gönderildi; dokuz PR ayrı ayrı incelenerek `master` dalına birleştirildi. Birleştirilen ana dalın dosyaları doğrulanan yerel kaynakla birebir eşleşti. Sürüm etiketi ve Blackboard'a 9 Ekim ZIP teslimi henüz yapılmadı; Blackboard yüklemesini öğrenci yapacak.
 
 ## Dokuz maddelik kontrol matrisi
 
@@ -11,11 +11,11 @@ Bu kayıt, yerel çalışma kopyasını ve doğrulanabilen sonuçları anlatır.
 | 1 | Fork ve davet | Fork doğrulandı; davet gönderildi | [Fork](https://github.com/mertksll/hello-mobil); kaynak commit f3ba476. Öğrenci daveti gönderdiğini bildirdi; önceki kontrolde kabul bekliyordu. |
 | 2 | 7 Ekim Blackboard bildirimi | Öğrenci beyanıyla tamamlandı | Öğrenci sohbette gönderdiğini bildirdi; bu oturumda Blackboard açılmadı. |
 | 3 | Proje fikri | Hazır | [Amaç ve ekranlar](proje-fikri.md) |
-| 4 | README | Yerel kopyada hazır | [README](../README.md); README için ayrı yerel dal; GitHub PR bekliyor. |
-| 5 | Ajan dosyaları | Yerel kopyada hazır | [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) |
-| 6 | Markalama ve ikonlar | Yerel kopyada hazır | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
+| 4 | README | GitHub ana dalında | [README](../README.md); README için ayrı [PR #4](https://github.com/mertksll/hello-mobil/pull/4) birleştirildi. |
+| 5 | Ajan dosyaları | GitHub ana dalında | [AGENTS](../AGENTS.md), [CLAUDE](../CLAUDE.md), [GEMINI](../GEMINI.md) |
+| 6 | Markalama ve ikonlar | GitHub ana dalında | [Marka kılavuzu](branding.md), [statik doğrulama](kanit/static-audit.txt) |
 | 7 | Dört dilde bilgi sayfaları | 16 sayfa derlendi | [Build kaydı](kanit/build.txt), [form etkileşim testi](kanit/dom-test.txt) |
-| 8 | Mimari ağaç | Yerel kopyada hazır | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
+| 8 | Mimari ağaç | GitHub ana dalında | [Sayfa/platform matrisi](mimari-agac.md), [klasör belgesi](klasor-mimarisi.md) |
 | 9 | Derleme | Başarılı, çıkış kodu 0; ekran görüntüsü eklendi | [Gerçek terminal ekran görüntüsü](kanit/build.png), [44 sayfalık build kaydı](kanit/build.txt), [tür kontrolü](kanit/check.txt), [9 iş kuralı testi](kanit/test.txt) |
 
 ## Doğrulama kapsamı
@@ -36,11 +36,27 @@ Renk görevi: kahve paleti iki CSS temasıyla birlikte marka belgesine işlendi;
 Sayfa görevi: iletişim sayfası dört dilde oluşturuldu; ortak navigasyona ve mimari ağaç belgesine eklendi. Formdaki demo gönderim/reset izole DOM testinde doğrulandı. CLAUDE/GEMINI yalnızca AGENTS yönlendirmesi içerir; docs/*.md bağlantıları kontrol edildi.
 Bu kayıt mevcut ajanın yaptığı doğrulamadır; ayrı bir ajanın değerlendirmesi olduğu iddia edilmez.
 
-## Tamamlanmayı bekleyen GitHub ve teslim adımları
+## GitHub PR kayıtları
 
-1. Hazır yerel özellik dallarını ve ekran görüntüsünü içeren `docs/build-proof` dalını kendi fork'una gönder; her dal için PR aç. README değişikliği ayrı PR olmalıdır. Files changed incelemesini yap ve build kanıtını kontrol et.
-2. PR'ları sırayla master'a birleştir; en az bir gerçek merged PR bulunmalı.
-3. Birleştirilmiş master üzerinde etiketi oluştur:
+Her PR için AI görevi ve doğrulama sonucu açıklamada yer alır. Dosya farkları incelendi; bağımlı dallarda önceki PR'ların değişiklikleri güncel ana dalla ayrıca karşılaştırıldı. Birleştirme normal merge yöntemiyle yapıldı; koruma veya kontrol atlatılmadı.
+
+| PR | Dal | Ayrı kopyadaki build | Durum |
+|---|---|---|---|
+| [#1](https://github.com/mertksll/hello-mobil/pull/1) | `feature/agent-rules` | 11 sayfa, çıkış 0 | Birleştirildi |
+| [#2](https://github.com/mertksll/hello-mobil/pull/2) | `feature/kampus-coffee-branding` | 11 sayfa, çıkış 0 | Birleştirildi |
+| [#3](https://github.com/mertksll/hello-mobil/pull/3) | `feature/info-pages` | 26 sayfa, çıkış 0 | Birleştirildi |
+| [#4](https://github.com/mertksll/hello-mobil/pull/4) | `docs/readme-patch` | 26 sayfa, çıkış 0 | Birleştirildi |
+| [#5](https://github.com/mertksll/hello-mobil/pull/5) | `feature/coffee-experience` | 44 sayfa, çıkış 0 | Birleştirildi |
+| [#6](https://github.com/mertksll/hello-mobil/pull/6) | `fix/interface-copy` | 44 sayfa, çıkış 0 | Birleştirildi |
+| [#7](https://github.com/mertksll/hello-mobil/pull/7) | `fix/about-page` | 44 sayfa, çıkış 0 | Birleştirildi |
+| [#8](https://github.com/mertksll/hello-mobil/pull/8) | `fix/terms-course-notice` | 44 sayfa, çıkış 0 | Birleştirildi |
+| [#9](https://github.com/mertksll/hello-mobil/pull/9) | `docs/build-proof` | 44 sayfa, çıkış 0 | Birleştirildi |
+
+Dal bazındaki doğrulama özeti: [PR derlemeleri](kanit/pr-builds.txt). Bu doğrulamalar yerel, ayrı kaynak kopyalarında gerçekleştirildi; GitHub CI çalıştırması olarak sunulmaz.
+
+## Kalan sürüm ve teslim adımları
+
+1. Birleştirilmiş `master` üzerinde sürüm etiketini oluştur:
 
 ```bash
 git checkout master
@@ -49,16 +65,16 @@ git tag -a v0.1.0-batch-01 -m "Hafta 3: Batch 01 - Proje altyapısı, markalama 
 git push origin v0.1.0-batch-01
 ```
 
-4. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
-5. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
+2. GitHub **Code → Download ZIP** ile güncel master ZIP'ini indir.
+3. Öğrenci Blackboard'a yalnızca bu ZIP'i yükler; son tarih 9 Ekim 23:59, en fazla 3 deneme. Yüklemenin tamamlandığını Blackboard'da doğrular.
 
-Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmemiştir. PR, tag veya Blackboard teslimi yapılmadan bu satırları tamamlandı olarak değiştirmeyin.
+Yerelde üretilen kaynak ZIP, GitHub'dan indirilen final teslim ZIP'i olarak işaretlenmez. Tag veya Blackboard teslimi yapılmadan bu adımları tamamlandı olarak değiştirmeyin.
 
 ## Arayüz yenilemesi — 9 Ekim
 
 `feature/coffee-experience` dalında kullanıcı isteğiyle 24 fotoğraflı ürün, üç markanın raster logoları, yeniden tasarlanan sepet/sipariş/profil ekranları eklendi. Yerel profil ve favoriler, sepet sayacı, fiyat sıralaması, tekrar sipariş ve sipariş geçmişini onaylı silme uygulanmıştır. Var olan ürün kimlikleri korunmuştur.
 
-Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub ve Blackboard adımları hâlâ beklemektedir.
+Önizlemenin açık Chrome sekmesinde yeni içeriği metin olarak doğrulandı. Logo/fotoğraf dosyaları yerelde görsel olarak incelendi. Tarayıcı kontrol bağlantısı hata verdiğinden tüm ekranların gerçek tarayıcı ekran görüntüsüyle görsel testi yapılmış sayılmaz. Build/check ve izole DOM testlerinin güncel çıktıları kanıt klasöründedir. GitHub PR aşaması tamamlandı; sürüm etiketi ve Blackboard teslimi beklemektedir.
 
 ## Arayüz metinleri
 
