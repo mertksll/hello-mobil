@@ -1,0 +1,7 @@
+Date: 2026-10-09T23:41:45.740Z
+Built HTML page audit with JSDOM; no browser/device visual test.
+PASS tr: localized title, 5 sections, direction, 5 footer links, 4 reciprocal language targets, terms link and metadata.
+PASS en: localized title, 5 sections, direction, 5 footer links, 4 reciprocal language targets, terms link and metadata.
+PASS ar: localized title, 5 sections, direction, 5 footer links, 4 reciprocal language targets, terms link and metadata.
+PASS fa: localized title, 5 sections, direction, 5 footer links, 4 reciprocal language targets, terms link and metadata.
+PASS guide reachable from footer on all 48 routes.

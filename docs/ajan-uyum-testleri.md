@@ -21,8 +21,27 @@ Bu kayıt, eğitmenin Görev 08 geri bildiriminden sonra öğrencinin onayladı�
 - WCAG sRGB hesabında yardımcı metin/kart kontrastı açık temada **6.55:1**, koyu temada **8.97:1**; önceki değerlerden yüksektir. Kart, sayfa, vurgu ve hero zeminlerinin tamamında en az 4.5:1 sağlandı.
 - `bun run build`: **44 sayfa, çıkış 0**. [Bu görevin sabit derleme kaydı](kanit/ajan-renk-build.txt).
 - [Gerçek renk testi çıktısı](kanit/ajan-renk.txt): iki tema, dört zemin, belge eşleşmesi ve indeks denetimi başarılı.
-- Kontrol statiktir; tarayıcıda görsel test yapıldığı iddia edilmez. PR kaydı, birleştirme doğrulanınca eklenecektir.
+- Kontrol statiktir; tarayıcıda görsel test yapıldığı iddia edilmez. [PR #17](https://github.com/mertksll/kampus-coffee/pull/17) normal merge ile birleştirildi; merge commiti `c241796d315bfb324cdecccb6fd9e2c89ecbbfd9`.
 
 ## Test 2 — Dört dilde sipariş rehberi
 
-Renk görevi birleştirildikten sonra ayrı dal ve PR üzerinde uygulanacaktır; henüz başarılı olarak işaretlenmemiştir.
+### Görev istemi
+
+> AGENTS.md, sayfa mimarisi, klasör mimarisi ve iş kurallarını oku. Kullanıcıya kahve seçimi, tek kafeli sepet, toplu indirim, sınıf bilgileri ve sipariş kayıtlarını açıklayan bir Sipariş rehberi ekle. TR/EN/AR/FA sürümlerini birlikte oluştur; AR/FA sağdan sola olsun. Mevcut stilleri kullan, ortak navigasyon ve aynı sayfaya giden dil bağlantılarını ekle, mimari ağacı güncelle ve derlemeyi doğrula.
+
+### Uygulama ve kurala uyum
+
+- Okunan belgeler: [AGENTS](../AGENTS.md), [sayfa mimarisi](mimari-agac.md), [klasör mimarisi](klasor-mimarisi.md), [iş kuralları](kurallar.md), [Görev 08](tasks/week-3/08-agents-pro.task.md).
+- Dal: `feature/ajan-siparis-rehberi`; renk görevinden sonra korumalı master'dan açıldı.
+- Dört MDX dosyası mevcut `src/pages/` dil hiyerarşisine eklendi. Yeni rota ağacı yalnız [mimari belgede](mimari-agac.md) tutulur.
+- Ortak `Layout.astro` içindeki alt menü ve dil seçici güncellendi; AR/FA yönü ortak layout'tan alınır.
+- Mevcut `info-page` ve `btn` sınıfları kullanıldı; yeni sabit renk, ağ isteği, ödeme işlemi veya depolama kodu eklenmedi.
+
+### Doğrulama
+
+- `bun run build`: **48 sayfa, çıkış 0**. [Bu görevin sabit build kaydı](kanit/ajan-sayfa-build.txt).
+- `bun run check`: Astro ve Svelte kontrollerinde **0 hata / 0 uyarı**; [komut çıktısı](kanit/check.txt).
+- `bun run test`: **9 test / 25 doğrulama başarılı**; [komut çıktısı](kanit/test.txt).
+- [Derlenmiş HTML denetimi](kanit/ajan-sayfa.txt): dört dilde başlık, beş içerik bölümü, AR/FA RTL, dört karşılıklı dil bağlantısı, koşullar bağlantısı ve 48 sayfanın alt menüsünden erişim doğrulandı.
+- [Statik denetim](kanit/static-audit.txt): tüm yerel bağlantılar, belge indeksi, renk tablosu ve ikonlar başarılı. [Bileşen testinde](kanit/dom-test.txt) mevcut sepet, profil, sipariş ve dört dilde iletişim akışı da geçti.
+- Bunlar derleme, statik HTML ve JSDOM kontrolleridir. Chrome aracı başlatılamadığı için gerçek tarayıcı görsel kontrolü yapılmadı. PR birleştirme sonucu son kayda eklenecektir.

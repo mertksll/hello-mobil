@@ -24,10 +24,14 @@ Kampus's Coffee
 ├── /fa/hakkinda/             FA MDX, RTL
 ├── /fa/iletisim/             FA Astro + Svelte, RTL
 ├── /fa/kosullar/             FA MDX, RTL
-└── /fa/gizlilik/             FA MDX, RTL
+├── /fa/gizlilik/             FA MDX, RTL
+├── /rehber/                  TR MDX, sipariş rehberi
+├── /en/rehber/               EN MDX, sipariş rehberi
+├── /ar/rehber/               AR MDX, sipariş rehberi, RTL
+└── /fa/rehber/               FA MDX, sipariş rehberi, RTL
 ```
 
-Toplam 44 statik rota: 4 ana sayfa, 24 ürün, 16 bilgi sayfası. Bilgi sayfaları alt bilgi ve profil üzerinden erişilir; dil seçici aynı bilgi sayfasının çevirisine gider. Menü ve sipariş akışı bu aşamada Türkçedir. Sayfalar standart bağlantılarla açılır; sepet ve geçmiş istemcide yüklenir. Tema tüm sayfalarda ortaktır.
+Toplam 48 statik rota: 4 ana sayfa, 24 ürün, 20 bilgi sayfası. Bütün bilgi sayfaları alt bilgiden erişilir; profil ayrıca hakkında, iletişim, koşullar ve gizlilik bağlantılarını sunar; dil seçici aynı bilgi sayfasının çevirisine gider. Menü ve sipariş akışı bu aşamada Türkçedir. Sayfalar standart bağlantılarla açılır; sepet ve geçmiş istemcide yüklenir. Tema tüm sayfalarda ortaktır.
 
 Akış: keşfet → kahve seçenekleri → tek kafeli sepet → örnek sınıf ve demo onayı → sipariş geçmişi. Tauri içinde Rust `siparis_olustur`; webde Web Crypto ile demo kodu. Mevcut cihaz geçmişiyle kod çakışması denetlenir; bu kod güvenlik token'ı değildir.
 
