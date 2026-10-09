@@ -39,7 +39,7 @@
 | Öğrenci | **Mustafa Mert Köksal** |
 | Öğrenci numarası | **2620511152** |
 | GitHub / iletişim | [mertksll](https://github.com/mertksll) |
-| Fork | [mertksll/hello-mobil](https://github.com/mertksll/hello-mobil) |
+| Fork | [mertksll/kampus-coffee](https://github.com/mertksll/kampus-coffee) |
 | Kaynak şablon | [keyvanarasteh/hello-mobil](https://github.com/keyvanarasteh/hello-mobil) |
 
 <a id="proje"></a>
@@ -74,8 +74,8 @@ Kafe adları örnektir; ortaklık veya gerçek entegrasyon yoktur. Ödeme, gerç
 Önce [kurulum önkoşullarını](docs/kurulum.md) tamamlayın. Web için Rust gerekmez; Tauri için Rust ve işletim sistemi araçları gerekir.
 
 ```bash
-git clone https://github.com/mertksll/hello-mobil.git
-cd hello-mobil
+git clone https://github.com/mertksll/kampus-coffee.git
+cd kampus-coffee
 bun install
 bun run dev
 ```

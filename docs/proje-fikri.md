@@ -7,7 +7,7 @@
 - **Öğrenci Adı Soyadı:** Mustafa Mert Köksal
 - **Öğrenci Numarası:** 2620511152
 - **GitHub Kullanıcı Adı:** mertksll
-- **Fork Linki:** https://github.com/mertksll/hello-mobil
+- **Fork Linki:** https://github.com/mertksll/kampus-coffee
 - **İlham Alınan Konsept / Platform:** Kahve sipariş uygulamaları ve Yemeksepeti / Getir'in teslimat akışı; kampüs içi kullanım için özgün uyarlama.
 
 ## 2. Proje Amacı ve Çözülen Problem
